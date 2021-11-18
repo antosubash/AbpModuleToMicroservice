@@ -1,0 +1,111 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "ProjectService.Domain.Shared": {
+      "path": "src/ProjectService.Domain.Shared/ProjectService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.Domain": {
+      "path": "src/ProjectService.Domain/ProjectService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.Application.Contracts": {
+      "path": "src/ProjectService.Application.Contracts/ProjectService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.Application": {
+      "path": "src/ProjectService.Application/ProjectService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.EntityFrameworkCore": {
+      "path": "src/ProjectService.EntityFrameworkCore/ProjectService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.MongoDB": {
+      "path": "src/ProjectService.MongoDB/ProjectService.MongoDB.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.HttpApi": {
+      "path": "src/ProjectService.HttpApi/ProjectService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.HttpApi.Client": {
+      "path": "src/ProjectService.HttpApi.Client/ProjectService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.TestBase": {
+      "path": "test/ProjectService.TestBase/ProjectService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "ProjectService.EntityFrameworkCore.Tests": {
+      "path": "test/ProjectService.EntityFrameworkCore.Tests/ProjectService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "ProjectService.MongoDB.Tests": {
+      "path": "test/ProjectService.MongoDB.Tests/ProjectService.MongoDB.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "ProjectService.Domain.Tests": {
+      "path": "test/ProjectService.Domain.Tests/ProjectService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "ProjectService.Application.Tests": {
+      "path": "test/ProjectService.Application.Tests/ProjectService.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "ProjectService.HttpApi.Host": {
+      "path": "host/ProjectService.HttpApi.Host/ProjectService.HttpApi.Host.abppkg.json",
+      "folder": "host"
+    },
+    "ProjectService.Web": {
+      "path": "src/ProjectService.Web/ProjectService.Web.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/ProjectService.HttpApi.Client.ConsoleTestApp/ProjectService.HttpApi.Client.ConsoleTestApp.abppkg.json",
+      "folder": "test"
+    },
+    "ProjectService.Web.Host": {
+      "path": "host/ProjectService.Web.Host/ProjectService.Web.Host.abppkg.json",
+      "folder": "host"
+    },
+    "ProjectService.IdentityServer": {
+      "path": "host/ProjectService.IdentityServer/ProjectService.IdentityServer.abppkg.json",
+      "folder": "host"
+    },
+    "ProjectService.Host.Shared": {
+      "path": "host/ProjectService.Host.Shared/ProjectService.Host.Shared.abppkg.json",
+      "folder": "host"
+    },
+    "ProjectService.Web.Unified": {
+      "path": "host/ProjectService.Web.Unified/ProjectService.Web.Unified.abppkg.json",
+      "folder": "host"
+    },
+    "ProjectService.Blazor": {
+      "path": "src/ProjectService.Blazor/ProjectService.Blazor.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.Blazor.Host": {
+      "path": "host/ProjectService.Blazor.Host/ProjectService.Blazor.Host.abppkg.json",
+      "folder": "host"
+    },
+    "ProjectService.Blazor.Server": {
+      "path": "src/ProjectService.Blazor.Server/ProjectService.Blazor.Server.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.Blazor.WebAssembly": {
+      "path": "src/ProjectService.Blazor.WebAssembly/ProjectService.Blazor.WebAssembly.abppkg.json",
+      "folder": "src"
+    },
+    "ProjectService.Blazor.Server.Host": {
+      "path": "host/ProjectService.Blazor.Server.Host/ProjectService.Blazor.Server.Host.abppkg.json",
+      "folder": "host"
+    }
+  }
+}

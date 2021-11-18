@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>MainApp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MainApp.Domain\MainApp.Domain.csproj" />
+    <ProjectReference Include="..\MainApp.Application.Contracts\MainApp.Application.Contracts.csproj" />
+  <ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.Application\ProjectService.Application.csproj" /></ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Account.Application" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Application" Version="5.0.0-rc.1" />
+  </ItemGroup>
+
+</Project>

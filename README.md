@@ -41,7 +41,7 @@ cd .\modules\ProjectService\src\
 Now lets create a Web Api project to host our module.
 
 ```bash
-dotnet new webapi -n ProjectService.HttpApi.Host --framework "net5.0"
+dotnet new webapi -n ProjectService.HttpApi.Host
 ```
 
 Now open the ProjectService solution and the newly created Host project to the solution.
@@ -80,16 +80,15 @@ Add the following packages to the `ProjectService.HttpApi.Host` project.
 
 ```xml
 <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="4.4.4" />
-    <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="4.4.4" />
-    <PackageReference Include="Volo.Abp.Autofac" Version="4.4.4" />
-    <PackageReference Include="Volo.Abp.Core" Version="4.4.4" />
-    <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="4.4.4" />
-    <PackageReference Include="Volo.Abp.Swashbuckle" Version="4.4.4" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Authentication.JwtBearer" Version="4.4.4" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="4.4.4" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Core" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Swashbuckle" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Authentication.JwtBearer" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="5.0.0-rc.1" />
     <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
@@ -376,13 +375,15 @@ public DbSet<Project> Projects { get; set; }
 
 ## Configure Entity in EfCore
 
+Make sure you have the updated the ef core global tool
+
 Configuration is done in the `DbContextModelCreatingExtensions` class. This should be available in the `ProjectService.EntityFrameworkCore` project
 
 ```cs
 builder.Entity<Project>(b =>
 {
     //Configure table & schema name
-    b.ToTable(options.TablePrefix + "Projects", options.Schema);
+    b.ToTable(ProjectServiceDbProperties.DbTablePrefix + "Projects", ProjectServiceDbProperties.Schema);
 
     b.ConfigureByConvention();
 });
@@ -390,7 +391,20 @@ builder.Entity<Project>(b =>
 
 ## Prepare for the migration
 
-Add `Volo.Abp.EntityFrameworkCore.SqlServer` nuget package to the `ProjectService.EntityFrameworkCore` project.
+```bash
+dotnet tool update --global dotnet-ef
+```
+
+Add necessary packages to the `ProjectService.EntityFrameworkCore` project.
+
+```xml
+<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+    <PrivateAssets>all</PrivateAssets>
+    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+</PackageReference>
+<PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="5.0.0-rc.1" />
+<PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="5.0.0-rc.1" />
+```
 
 We need to create a `ProjectServiceDbContextFactory` to support migrations. [Check here for more info about this](https://docs.microsoft.com/en-us/ef/core/cli/dbcontext-creation?tabs=dotnet-core-cli)
 
@@ -479,6 +493,7 @@ Learn more about the [Application Services](https://docs.abp.io/en/abp/latest/Ap
 Application service are created in the `ProjectService.Application` project
 
 ```cs
+[Authorize]
 public class ProjectAppService : ProjectServiceAppService, IProjectAppService
 {
     private readonly IRepository<Project, Guid> projectRepository;
@@ -575,6 +590,24 @@ In the `MainApp.DbMigrator` project update the `appsettings.json` with the new s
 }
 ```
 
+Update the `commonScopes` in the `CreateClientsAsync` method
+
+```cs
+var commonScopes = new[]
+{
+    "email",
+    "openid",
+    "profile",
+    "role",
+    "phone",
+    "address",
+    "MainApp",
+    "ProjectService"
+};
+```
+
+This will add the newly created scope to all the clients.
+
 Update the `CreateClientsAsync` method to create the swagger client in the `IdentityServerDataSeedContributor` in the `MainApp.Domain`.
 
 ```cs
@@ -605,8 +638,58 @@ dotnet run
 
 This will run the `DbMigrator` project. The `DbMigrator` will seed the database with the New Scope, API and Client in our Identity Server.
 
-Once the migration is done we are ready to run the app and see it working.
+Once the migration is done lets update the `CorsOrigins` in the IdentityServer.
+
+```json
+"App": {
+"SelfUrl": "https://localhost:44373",
+"ClientUrl": "http://localhost:4200",
+"CorsOrigins": "https://*.MainApp.com,http://localhost:4200,https://localhost:44307,https://localhost:44358,https://localhost:44372,{ Project Service url }", // update the entry here
+"RedirectAllowedUrls": "http://localhost:4200,https://localhost:44307"
+},
+```
+
+Now lets run the application.
 
 ## Running the application
 
-You need to run the host project and the identity server for auth to work.
+Since we have run 4 services lets init `tye` so that it will be easier.
+
+```bash
+tye init
+```
+
+This command will create the `tye.yaml` file which will have the project without out ports binding. Update the ports from your solution. Here is the sample `tye.yaml`.
+
+```yaml
+name: mainapp
+services:
+- name: mainapp-web
+  project: src/MainApp.Web/MainApp.Web.csproj
+  bindings:
+  - port: 44343 //update your ports here
+    protocol: https
+- name: mainapp-identityserver
+  project: src/MainApp.IdentityServer/MainApp.IdentityServer.csproj
+  bindings:
+  - port: 44373 //update your ports here
+    protocol: https
+- name: mainapp-httpapi-host
+  project: src/MainApp.HttpApi.Host/MainApp.HttpApi.Host.csproj
+  bindings:
+  - port: 44358 //update your ports here
+    protocol: https
+- name: project-service
+  project: modules/ProjectService/src/ProjectService.HttpApi.Host/ProjectService.HttpApi.Host.csproj
+  bindings:
+  - port: 44372 //update your ports here
+    protocol: https
+```
+
+Now run the tye command.
+
+```bash
+tye run
+```
+
+This will run all the projects. Navigate to the `ProjectService` and do the swagger authorization to login and call the project api.

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>ProjectService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="5.0.0-rc.1" />
+    <ProjectReference Include="..\ProjectService.Domain.Shared\ProjectService.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

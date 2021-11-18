@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "ProjectService": {
+      "path": "ProjectService.abpmdl.json"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+		<PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="5.0.0-rc.1" />
+		<PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="5.0.0-rc.1" />
+		<PackageReference Include="Volo.Abp.Autofac" Version="5.0.0-rc.1" />
+		<PackageReference Include="Volo.Abp.Core" Version="5.0.0-rc.1" />
+		<PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="5.0.0-rc.1" />
+		<PackageReference Include="Volo.Abp.Swashbuckle" Version="5.0.0-rc.1" />
+		<PackageReference Include="Volo.Abp.AspNetCore.Authentication.JwtBearer" Version="5.0.0-rc.1" />
+		<PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="5.0.0-rc.1" />
+		<PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+		<PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\ProjectService.Application\ProjectService.Application.csproj" />
+	  <ProjectReference Include="..\ProjectService.EntityFrameworkCore\ProjectService.EntityFrameworkCore.csproj" />
+	  <ProjectReference Include="..\ProjectService.HttpApi\ProjectService.HttpApi.csproj" />
+	</ItemGroup>
+</Project>

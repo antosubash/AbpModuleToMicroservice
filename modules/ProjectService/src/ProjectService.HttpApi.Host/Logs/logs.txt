@@ -1,0 +1,758 @@
+2021-11-18 21:08:43.735 +01:00 [INF] Starting ProjectService.Host.
+2021-11-18 21:08:46.807 +01:00 [INF] User profile is available. Using 'C:\Users\antos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-18 21:08:46.943 +01:00 [INF] Loaded ABP modules:
+2021-11-18 21:08:46.943 +01:00 [INF] - ProjectService.HttpApi.Host.ProjectServiceHostModule
+2021-11-18 21:08:46.943 +01:00 [INF]   - ProjectService.ProjectServiceHttpApiModule
+2021-11-18 21:08:46.943 +01:00 [INF]     - ProjectService.ProjectServiceApplicationContractsModule
+2021-11-18 21:08:46.943 +01:00 [INF]       - ProjectService.ProjectServiceDomainSharedModule
+2021-11-18 21:08:46.943 +01:00 [INF]         - Volo.Abp.Validation.AbpValidationModule
+2021-11-18 21:08:46.943 +01:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2021-11-18 21:08:46.943 +01:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2021-11-18 21:08:46.943 +01:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2021-11-18 21:08:46.943 +01:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2021-11-18 21:08:46.943 +01:00 [INF]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2021-11-18 21:08:46.943 +01:00 [INF]               - Volo.Abp.Security.AbpSecurityModule
+2021-11-18 21:08:46.943 +01:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2021-11-18 21:08:46.943 +01:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2021-11-18 21:08:46.943 +01:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2021-11-18 21:08:46.943 +01:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2021-11-18 21:08:46.943 +01:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2021-11-18 21:08:46.943 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2021-11-18 21:08:46.943 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2021-11-18 21:08:46.943 +01:00 [INF]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2021-11-18 21:08:46.943 +01:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2021-11-18 21:08:46.943 +01:00 [INF]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2021-11-18 21:08:46.943 +01:00 [INF]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2021-11-18 21:08:46.943 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2021-11-18 21:08:46.943 +01:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2021-11-18 21:08:46.943 +01:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2021-11-18 21:08:46.943 +01:00 [INF]           - Volo.Abp.Threading.AbpThreadingModule
+2021-11-18 21:08:46.943 +01:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2021-11-18 21:08:46.943 +01:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2021-11-18 21:08:46.943 +01:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2021-11-18 21:08:46.943 +01:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2021-11-18 21:08:46.943 +01:00 [INF]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2021-11-18 21:08:46.943 +01:00 [INF]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2021-11-18 21:08:46.943 +01:00 [INF]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2021-11-18 21:08:46.943 +01:00 [INF]         - Volo.Abp.UI.AbpUiModule
+2021-11-18 21:08:46.943 +01:00 [INF]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2021-11-18 21:08:46.943 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2021-11-18 21:08:46.943 +01:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2021-11-18 21:08:46.943 +01:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2021-11-18 21:08:46.943 +01:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2021-11-18 21:08:46.943 +01:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2021-11-18 21:08:46.943 +01:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2021-11-18 21:08:46.943 +01:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2021-11-18 21:08:46.943 +01:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2021-11-18 21:08:46.943 +01:00 [INF]         - Volo.Abp.Features.AbpFeaturesModule
+2021-11-18 21:08:46.943 +01:00 [INF]   - ProjectService.ProjectServiceApplicationModule
+2021-11-18 21:08:46.943 +01:00 [INF]     - ProjectService.ProjectServiceDomainModule
+2021-11-18 21:08:46.943 +01:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2021-11-18 21:08:46.943 +01:00 [INF]   - ProjectService.EntityFrameworkCore.ProjectServiceEntityFrameworkCoreModule
+2021-11-18 21:08:46.943 +01:00 [INF]     - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2021-11-18 21:08:46.943 +01:00 [INF]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2021-11-18 21:08:46.943 +01:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2021-11-18 21:08:46.943 +01:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2021-11-18 21:08:46.943 +01:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2021-11-18 21:08:46.943 +01:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2021-11-18 21:08:47.825 +01:00 [INF] Initialized all ABP modules.
+2021-11-18 21:08:47.983 +01:00 [INF] Now listening on: https://localhost:44372
+2021-11-18 21:08:47.983 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-18 21:08:47.983 +01:00 [INF] Hosting environment: Development
+2021-11-18 21:08:47.983 +01:00 [INF] Content root path: C:\repos\GitHub\AbpModuleToMicroservice\modules\ProjectService\src\ProjectService.HttpApi.Host
+2021-11-18 21:08:48.970 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/weatherforecast - -
+2021-11-18 21:08:49.486 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/weatherforecast - - - 404 0 - 516.0911ms
+2021-11-18 21:09:23.655 +01:00 [INF] Starting ProjectService.Host.
+2021-11-18 21:09:25.236 +01:00 [INF] User profile is available. Using 'C:\Users\antos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-18 21:09:25.325 +01:00 [INF] Loaded ABP modules:
+2021-11-18 21:09:25.325 +01:00 [INF] - ProjectService.HttpApi.Host.ProjectServiceHostModule
+2021-11-18 21:09:25.325 +01:00 [INF]   - ProjectService.ProjectServiceHttpApiModule
+2021-11-18 21:09:25.325 +01:00 [INF]     - ProjectService.ProjectServiceApplicationContractsModule
+2021-11-18 21:09:25.325 +01:00 [INF]       - ProjectService.ProjectServiceDomainSharedModule
+2021-11-18 21:09:25.325 +01:00 [INF]         - Volo.Abp.Validation.AbpValidationModule
+2021-11-18 21:09:25.325 +01:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2021-11-18 21:09:25.325 +01:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2021-11-18 21:09:25.325 +01:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2021-11-18 21:09:25.325 +01:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2021-11-18 21:09:25.325 +01:00 [INF]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2021-11-18 21:09:25.325 +01:00 [INF]               - Volo.Abp.Security.AbpSecurityModule
+2021-11-18 21:09:25.325 +01:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2021-11-18 21:09:25.325 +01:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2021-11-18 21:09:25.325 +01:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2021-11-18 21:09:25.325 +01:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2021-11-18 21:09:25.325 +01:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2021-11-18 21:09:25.325 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2021-11-18 21:09:25.325 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2021-11-18 21:09:25.325 +01:00 [INF]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2021-11-18 21:09:25.325 +01:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2021-11-18 21:09:25.325 +01:00 [INF]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2021-11-18 21:09:25.325 +01:00 [INF]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2021-11-18 21:09:25.325 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2021-11-18 21:09:25.325 +01:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2021-11-18 21:09:25.325 +01:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2021-11-18 21:09:25.325 +01:00 [INF]           - Volo.Abp.Threading.AbpThreadingModule
+2021-11-18 21:09:25.325 +01:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2021-11-18 21:09:25.325 +01:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2021-11-18 21:09:25.325 +01:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2021-11-18 21:09:25.325 +01:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2021-11-18 21:09:25.325 +01:00 [INF]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2021-11-18 21:09:25.325 +01:00 [INF]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2021-11-18 21:09:25.325 +01:00 [INF]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2021-11-18 21:09:25.325 +01:00 [INF]         - Volo.Abp.UI.AbpUiModule
+2021-11-18 21:09:25.325 +01:00 [INF]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2021-11-18 21:09:25.325 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2021-11-18 21:09:25.325 +01:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2021-11-18 21:09:25.325 +01:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2021-11-18 21:09:25.325 +01:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2021-11-18 21:09:25.325 +01:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2021-11-18 21:09:25.325 +01:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2021-11-18 21:09:25.325 +01:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2021-11-18 21:09:25.325 +01:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2021-11-18 21:09:25.325 +01:00 [INF]         - Volo.Abp.Features.AbpFeaturesModule
+2021-11-18 21:09:25.325 +01:00 [INF]   - ProjectService.ProjectServiceApplicationModule
+2021-11-18 21:09:25.325 +01:00 [INF]     - ProjectService.ProjectServiceDomainModule
+2021-11-18 21:09:25.325 +01:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2021-11-18 21:09:25.325 +01:00 [INF]   - ProjectService.EntityFrameworkCore.ProjectServiceEntityFrameworkCoreModule
+2021-11-18 21:09:25.325 +01:00 [INF]     - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2021-11-18 21:09:25.325 +01:00 [INF]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2021-11-18 21:09:25.325 +01:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2021-11-18 21:09:25.325 +01:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2021-11-18 21:09:25.325 +01:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2021-11-18 21:09:25.325 +01:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2021-11-18 21:09:25.727 +01:00 [INF] Initialized all ABP modules.
+2021-11-18 21:09:25.835 +01:00 [INF] Now listening on: https://localhost:44372
+2021-11-18 21:09:25.835 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-18 21:09:25.835 +01:00 [INF] Hosting environment: Development
+2021-11-18 21:09:25.835 +01:00 [INF] Content root path: C:\repos\GitHub\AbpModuleToMicroservice\modules\ProjectService\src\ProjectService.HttpApi.Host
+2021-11-18 21:09:26.964 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/ - -
+2021-11-18 21:09:27.180 +01:00 [INF] Executing endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 21:09:27.220 +01:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller ProjectService.HttpApi.Host.Controllers.HomeController (ProjectService.HttpApi.Host).
+2021-11-18 21:09:27.240 +01:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2021-11-18 21:09:27.244 +01:00 [INF] Executed action ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) in 21.0646ms
+2021-11-18 21:09:27.244 +01:00 [INF] Executed endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 21:09:27.260 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger - -
+2021-11-18 21:09:27.260 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/ - - - 302 0 - 296.4647ms
+2021-11-18 21:09:27.264 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger - - - 301 0 - 3.5286ms
+2021-11-18 21:09:27.271 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/index.html - -
+2021-11-18 21:09:27.425 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/index.html - - - 200 - text/html;charset=utf-8 154.9821ms
+2021-11-18 21:09:27.430 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/swagger-ui.css - -
+2021-11-18 21:09:27.430 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/ui/abp.js - -
+2021-11-18 21:09:27.431 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/ui/abp.swagger.js - -
+2021-11-18 21:09:27.431 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/swagger-ui-bundle.js - -
+2021-11-18 21:09:27.431 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/swagger-ui-standalone-preset.js - -
+2021-11-18 21:09:27.432 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - -
+2021-11-18 21:09:27.435 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - - 200 11961 application/javascript;+charset=utf-8 3.2539ms
+2021-11-18 21:09:27.441 +01:00 [INF] Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'N/A'
+2021-11-18 21:09:27.441 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-11-18 21:09:27.441 +01:00 [INF] Sending file. Request path: '/swagger/ui/abp.swagger.js'. Physical path: 'N/A'
+2021-11-18 21:09:27.441 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/ui/abp.js - - - 200 3025 application/javascript 10.9378ms
+2021-11-18 21:09:27.441 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/ui/abp.swagger.js - - - 200 1023 application/javascript 10.5733ms
+2021-11-18 21:09:27.441 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/swagger-ui.css - - - 200 143632 text/css 11.1169ms
+2021-11-18 21:09:27.442 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-11-18 21:09:27.443 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 11.1900ms
+2021-11-18 21:09:27.450 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-11-18 21:09:27.450 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/swagger-ui-bundle.js - - - 200 1091362 application/javascript 18.9192ms
+2021-11-18 21:09:27.939 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - -
+2021-11-18 21:09:27.971 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/favicon-32x32.png - -
+2021-11-18 21:09:27.972 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-11-18 21:09:27.972 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/favicon-32x32.png - - - 200 628 image/png 1.1433ms
+2021-11-18 21:09:28.031 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 92.3665ms
+2021-11-18 22:06:46.446 +01:00 [INF] Starting ProjectService.Host.
+2021-11-18 22:06:50.337 +01:00 [INF] User profile is available. Using 'C:\Users\antos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-18 22:06:50.437 +01:00 [INF] Loaded ABP modules:
+2021-11-18 22:06:50.437 +01:00 [INF] - ProjectService.HttpApi.Host.ProjectServiceHostModule
+2021-11-18 22:06:50.437 +01:00 [INF]   - ProjectService.ProjectServiceHttpApiModule
+2021-11-18 22:06:50.437 +01:00 [INF]     - ProjectService.ProjectServiceApplicationContractsModule
+2021-11-18 22:06:50.437 +01:00 [INF]       - ProjectService.ProjectServiceDomainSharedModule
+2021-11-18 22:06:50.437 +01:00 [INF]         - Volo.Abp.Validation.AbpValidationModule
+2021-11-18 22:06:50.437 +01:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2021-11-18 22:06:50.437 +01:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2021-11-18 22:06:50.437 +01:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2021-11-18 22:06:50.437 +01:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2021-11-18 22:06:50.437 +01:00 [INF]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2021-11-18 22:06:50.437 +01:00 [INF]               - Volo.Abp.Security.AbpSecurityModule
+2021-11-18 22:06:50.437 +01:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2021-11-18 22:06:50.437 +01:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2021-11-18 22:06:50.437 +01:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2021-11-18 22:06:50.437 +01:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2021-11-18 22:06:50.437 +01:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2021-11-18 22:06:50.437 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2021-11-18 22:06:50.437 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2021-11-18 22:06:50.437 +01:00 [INF]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2021-11-18 22:06:50.437 +01:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2021-11-18 22:06:50.437 +01:00 [INF]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2021-11-18 22:06:50.437 +01:00 [INF]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2021-11-18 22:06:50.437 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2021-11-18 22:06:50.437 +01:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2021-11-18 22:06:50.437 +01:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2021-11-18 22:06:50.437 +01:00 [INF]           - Volo.Abp.Threading.AbpThreadingModule
+2021-11-18 22:06:50.437 +01:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2021-11-18 22:06:50.437 +01:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2021-11-18 22:06:50.437 +01:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2021-11-18 22:06:50.437 +01:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2021-11-18 22:06:50.437 +01:00 [INF]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2021-11-18 22:06:50.437 +01:00 [INF]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2021-11-18 22:06:50.437 +01:00 [INF]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2021-11-18 22:06:50.437 +01:00 [INF]         - Volo.Abp.UI.AbpUiModule
+2021-11-18 22:06:50.437 +01:00 [INF]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2021-11-18 22:06:50.437 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2021-11-18 22:06:50.437 +01:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2021-11-18 22:06:50.437 +01:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2021-11-18 22:06:50.437 +01:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2021-11-18 22:06:50.437 +01:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2021-11-18 22:06:50.437 +01:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2021-11-18 22:06:50.437 +01:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2021-11-18 22:06:50.437 +01:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2021-11-18 22:06:50.437 +01:00 [INF]         - Volo.Abp.Features.AbpFeaturesModule
+2021-11-18 22:06:50.437 +01:00 [INF]   - ProjectService.ProjectServiceApplicationModule
+2021-11-18 22:06:50.437 +01:00 [INF]     - ProjectService.ProjectServiceDomainModule
+2021-11-18 22:06:50.437 +01:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2021-11-18 22:06:50.437 +01:00 [INF]   - ProjectService.EntityFrameworkCore.ProjectServiceEntityFrameworkCoreModule
+2021-11-18 22:06:50.437 +01:00 [INF]     - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2021-11-18 22:06:50.437 +01:00 [INF]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2021-11-18 22:06:50.437 +01:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2021-11-18 22:06:50.437 +01:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2021-11-18 22:06:50.437 +01:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2021-11-18 22:06:50.437 +01:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2021-11-18 22:06:51.180 +01:00 [INF] Initialized all ABP modules.
+2021-11-18 22:06:51.287 +01:00 [INF] Now listening on: https://localhost:44372
+2021-11-18 22:06:51.288 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-18 22:06:51.288 +01:00 [INF] Hosting environment: Development
+2021-11-18 22:06:51.288 +01:00 [INF] Content root path: C:\repos\GitHub\AbpModuleToMicroservice\modules\ProjectService\src\ProjectService.HttpApi.Host
+2021-11-18 22:06:52.223 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/ - -
+2021-11-18 22:06:52.655 +01:00 [INF] Executing endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:06:52.674 +01:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller ProjectService.HttpApi.Host.Controllers.HomeController (ProjectService.HttpApi.Host).
+2021-11-18 22:06:52.696 +01:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2021-11-18 22:06:52.699 +01:00 [INF] Executed action ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) in 21.989ms
+2021-11-18 22:06:52.700 +01:00 [INF] Executed endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:06:52.718 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/ - - - 302 0 - 495.2717ms
+2021-11-18 22:06:52.724 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/index.html - -
+2021-11-18 22:06:52.939 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/index.html - - - 200 - text/html;charset=utf-8 215.7415ms
+2021-11-18 22:06:52.943 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - -
+2021-11-18 22:06:52.945 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - - 200 11961 application/javascript;+charset=utf-8 2.4299ms
+2021-11-18 22:06:53.445 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - -
+2021-11-18 22:06:53.540 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 95.5975ms
+2021-11-18 22:07:00.926 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/abp/Swashbuckle/SetCsrfCookie - -
+2021-11-18 22:07:00.927 +01:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2021-11-18 22:07:00.928 +01:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle"}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2021-11-18 22:07:00.934 +01:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 5.5533ms
+2021-11-18 22:07:00.934 +01:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2021-11-18 22:07:00.934 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/abp/Swashbuckle/SetCsrfCookie - - - 204 - - 7.7916ms
+2021-11-18 22:07:00.979 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44372/api/app/project?text=asdfasdfasdf - 0
+2021-11-18 22:07:00.982 +01:00 [INF] CORS policy execution failed.
+2021-11-18 22:07:00.982 +01:00 [INF] Request origin https://localhost:44372 does not have permission to access the resource.
+2021-11-18 22:07:00.988 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.CreateAsync (ProjectService.Application)'
+2021-11-18 22:07:01.003 +01:00 [INF] Route matched with {action = "Create", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[ProjectService.ProjectDto] CreateAsync(System.String) on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-18 22:07:02.626 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:07:02.633 +01:00 [INF] Executing ObjectResult, writing value of type 'ProjectService.ProjectDto'.
+2021-11-18 22:07:02.640 +01:00 [INF] Executed action ProjectService.ProjectAppService.CreateAsync (ProjectService.Application) in 1636.8027ms
+2021-11-18 22:07:02.640 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.CreateAsync (ProjectService.Application)'
+2021-11-18 22:07:02.641 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:07:02.649 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:07:02.669 +01:00 [INF] AUDIT LOG: [200: POST   ] /api/app/project
+- UserName - UserId                 :  - 
+- ClientIpAddress        : ::1
+- ExecutionDuration      : 1676
+- Actions:
+  - ProjectService.ProjectAppService.CreateAsync (1315 ms.)
+    {"text":"asdfasdfasdf"}
+
+2021-11-18 22:07:02.669 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44372/api/app/project?text=asdfasdfasdf - 0 - 200 - application/json;+charset=utf-8 1689.8373ms
+2021-11-18 22:07:07.596 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/api/app/project - -
+2021-11-18 22:07:07.598 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-18 22:07:07.600 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-18 22:07:07.828 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:07:07.828 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-18 22:07:07.829 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 228.5176ms
+2021-11-18 22:07:07.829 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-18 22:07:07.829 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:07:07.829 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/api/app/project - - - 200 - application/json;+charset=utf-8 232.9797ms
+2021-11-18 22:07:14.275 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44372/api/app/project?text=222 - 0
+2021-11-18 22:07:14.276 +01:00 [INF] CORS policy execution failed.
+2021-11-18 22:07:14.276 +01:00 [INF] Request origin https://localhost:44372 does not have permission to access the resource.
+2021-11-18 22:07:14.277 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.CreateAsync (ProjectService.Application)'
+2021-11-18 22:07:14.277 +01:00 [INF] Route matched with {action = "Create", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[ProjectService.ProjectDto] CreateAsync(System.String) on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-18 22:07:14.322 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:07:14.323 +01:00 [INF] Executing ObjectResult, writing value of type 'ProjectService.ProjectDto'.
+2021-11-18 22:07:14.324 +01:00 [INF] Executed action ProjectService.ProjectAppService.CreateAsync (ProjectService.Application) in 47.0579ms
+2021-11-18 22:07:14.324 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.CreateAsync (ProjectService.Application)'
+2021-11-18 22:07:14.324 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:07:14.324 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:07:14.325 +01:00 [INF] AUDIT LOG: [200: POST   ] /api/app/project
+- UserName - UserId                 :  - 
+- ClientIpAddress        : ::1
+- ExecutionDuration      : 48
+- Actions:
+  - ProjectService.ProjectAppService.CreateAsync (45 ms.)
+    {"text":"222"}
+
+2021-11-18 22:07:14.325 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44372/api/app/project?text=222 - 0 - 200 - application/json;+charset=utf-8 49.8026ms
+2021-11-18 22:07:18.836 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/api/app/project - -
+2021-11-18 22:07:18.837 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-18 22:07:18.837 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-18 22:07:18.844 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:07:18.844 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-18 22:07:18.845 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 7.3362ms
+2021-11-18 22:07:18.845 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-18 22:07:18.845 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:07:18.845 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/api/app/project - - - 200 - application/json;+charset=utf-8 8.4302ms
+2021-11-18 22:21:03.828 +01:00 [INF] Starting ProjectService.Host.
+2021-11-18 22:21:04.548 +01:00 [INF] User profile is available. Using 'C:\Users\antos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-18 22:21:04.590 +01:00 [INF] Loaded ABP modules:
+2021-11-18 22:21:04.590 +01:00 [INF] - ProjectService.HttpApi.Host.ProjectServiceHostModule
+2021-11-18 22:21:04.590 +01:00 [INF]   - ProjectService.ProjectServiceHttpApiModule
+2021-11-18 22:21:04.590 +01:00 [INF]     - ProjectService.ProjectServiceApplicationContractsModule
+2021-11-18 22:21:04.590 +01:00 [INF]       - ProjectService.ProjectServiceDomainSharedModule
+2021-11-18 22:21:04.590 +01:00 [INF]         - Volo.Abp.Validation.AbpValidationModule
+2021-11-18 22:21:04.590 +01:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2021-11-18 22:21:04.590 +01:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2021-11-18 22:21:04.590 +01:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2021-11-18 22:21:04.590 +01:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2021-11-18 22:21:04.590 +01:00 [INF]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2021-11-18 22:21:04.590 +01:00 [INF]               - Volo.Abp.Security.AbpSecurityModule
+2021-11-18 22:21:04.590 +01:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2021-11-18 22:21:04.590 +01:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2021-11-18 22:21:04.590 +01:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2021-11-18 22:21:04.590 +01:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2021-11-18 22:21:04.590 +01:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2021-11-18 22:21:04.590 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2021-11-18 22:21:04.590 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2021-11-18 22:21:04.590 +01:00 [INF]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2021-11-18 22:21:04.590 +01:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2021-11-18 22:21:04.590 +01:00 [INF]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2021-11-18 22:21:04.590 +01:00 [INF]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2021-11-18 22:21:04.590 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2021-11-18 22:21:04.590 +01:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2021-11-18 22:21:04.590 +01:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2021-11-18 22:21:04.590 +01:00 [INF]           - Volo.Abp.Threading.AbpThreadingModule
+2021-11-18 22:21:04.590 +01:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2021-11-18 22:21:04.590 +01:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2021-11-18 22:21:04.590 +01:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2021-11-18 22:21:04.590 +01:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2021-11-18 22:21:04.590 +01:00 [INF]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2021-11-18 22:21:04.590 +01:00 [INF]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2021-11-18 22:21:04.590 +01:00 [INF]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2021-11-18 22:21:04.590 +01:00 [INF]         - Volo.Abp.UI.AbpUiModule
+2021-11-18 22:21:04.590 +01:00 [INF]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2021-11-18 22:21:04.590 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2021-11-18 22:21:04.590 +01:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2021-11-18 22:21:04.590 +01:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2021-11-18 22:21:04.590 +01:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2021-11-18 22:21:04.590 +01:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2021-11-18 22:21:04.590 +01:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2021-11-18 22:21:04.590 +01:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2021-11-18 22:21:04.590 +01:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2021-11-18 22:21:04.590 +01:00 [INF]         - Volo.Abp.Features.AbpFeaturesModule
+2021-11-18 22:21:04.590 +01:00 [INF]   - ProjectService.ProjectServiceApplicationModule
+2021-11-18 22:21:04.590 +01:00 [INF]     - ProjectService.ProjectServiceDomainModule
+2021-11-18 22:21:04.590 +01:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2021-11-18 22:21:04.590 +01:00 [INF]   - ProjectService.EntityFrameworkCore.ProjectServiceEntityFrameworkCoreModule
+2021-11-18 22:21:04.590 +01:00 [INF]     - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2021-11-18 22:21:04.590 +01:00 [INF]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2021-11-18 22:21:04.590 +01:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2021-11-18 22:21:04.590 +01:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2021-11-18 22:21:04.590 +01:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2021-11-18 22:21:04.590 +01:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2021-11-18 22:21:04.917 +01:00 [INF] Initialized all ABP modules.
+2021-11-18 22:21:04.994 +01:00 [INF] Now listening on: http://localhost:64243
+2021-11-18 22:21:04.994 +01:00 [INF] Now listening on: https://localhost:64244
+2021-11-18 22:21:04.994 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-18 22:21:04.994 +01:00 [INF] Hosting environment: Development
+2021-11-18 22:21:04.994 +01:00 [INF] Content root path: C:\repos\GitHub\AbpModuleToMicroservice\modules\ProjectService\src\ProjectService.HttpApi.Host
+2021-11-18 22:21:12.842 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64243/ - -
+2021-11-18 22:21:12.973 +01:00 [INF] Executing endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:21:12.984 +01:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller ProjectService.HttpApi.Host.Controllers.HomeController (ProjectService.HttpApi.Host).
+2021-11-18 22:21:13.000 +01:00 [INF] Executing action method ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) - Validation state: "Valid"
+2021-11-18 22:21:13.003 +01:00 [INF] Executed action method ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.0977ms.
+2021-11-18 22:21:13.008 +01:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2021-11-18 22:21:13.013 +01:00 [INF] Executed action ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) in 24.5325ms
+2021-11-18 22:21:13.013 +01:00 [INF] Executed endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:21:13.026 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:64243/ - - - 302 0 - 183.7682ms
+2021-11-18 22:21:13.028 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64243/swagger - -
+2021-11-18 22:21:13.030 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:64243/swagger - - - 301 0 - 1.8025ms
+2021-11-18 22:21:13.034 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64243/swagger/index.html - -
+2021-11-18 22:21:13.075 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:64243/swagger/index.html - - - 200 - text/html;charset=utf-8 41.5367ms
+2021-11-18 22:21:13.087 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64243/swagger/swagger-ui.css - -
+2021-11-18 22:21:13.087 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64243/swagger/ui/abp.js - -
+2021-11-18 22:21:13.088 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64243/swagger/ui/abp.swagger.js - -
+2021-11-18 22:21:13.093 +01:00 [INF] Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'N/A'
+2021-11-18 22:21:13.093 +01:00 [INF] Sending file. Request path: '/swagger/ui/abp.swagger.js'. Physical path: 'N/A'
+2021-11-18 22:21:13.093 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:64243/swagger/ui/abp.swagger.js - - - 200 1023 application/javascript 4.7053ms
+2021-11-18 22:21:13.093 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:64243/swagger/ui/abp.js - - - 200 3025 application/javascript 5.4495ms
+2021-11-18 22:21:13.097 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-11-18 22:21:13.101 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:64243/swagger/swagger-ui.css - - - 200 143632 text/css 14.2617ms
+2021-11-18 22:21:13.166 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64243/swagger/swagger-ui-bundle.js - -
+2021-11-18 22:21:13.172 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64243/swagger/swagger-ui-standalone-preset.js - -
+2021-11-18 22:21:13.174 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-11-18 22:21:13.175 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:64243/swagger/swagger-ui-bundle.js - - - 200 1091362 application/javascript 9.0197ms
+2021-11-18 22:21:13.176 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-11-18 22:21:13.177 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:64243/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 4.6764ms
+2021-11-18 22:21:13.592 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64243/swagger/v1/swagger.json - -
+2021-11-18 22:21:13.621 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64243/swagger/favicon-32x32.png - -
+2021-11-18 22:21:13.622 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-11-18 22:21:13.622 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:64243/swagger/favicon-32x32.png - - - 200 628 image/png 0.8649ms
+2021-11-18 22:21:13.666 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:64243/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 74.2004ms
+2021-11-18 22:21:37.082 +01:00 [INF] Application is shutting down...
+2021-11-18 22:21:37.453 +01:00 [INF] Starting ProjectService.Host.
+2021-11-18 22:21:37.948 +01:00 [INF] User profile is available. Using 'C:\Users\antos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-18 22:21:37.988 +01:00 [INF] Loaded ABP modules:
+2021-11-18 22:21:37.988 +01:00 [INF] - ProjectService.HttpApi.Host.ProjectServiceHostModule
+2021-11-18 22:21:37.988 +01:00 [INF]   - ProjectService.ProjectServiceHttpApiModule
+2021-11-18 22:21:37.988 +01:00 [INF]     - ProjectService.ProjectServiceApplicationContractsModule
+2021-11-18 22:21:37.988 +01:00 [INF]       - ProjectService.ProjectServiceDomainSharedModule
+2021-11-18 22:21:37.988 +01:00 [INF]         - Volo.Abp.Validation.AbpValidationModule
+2021-11-18 22:21:37.988 +01:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2021-11-18 22:21:37.988 +01:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2021-11-18 22:21:37.988 +01:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2021-11-18 22:21:37.988 +01:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2021-11-18 22:21:37.988 +01:00 [INF]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2021-11-18 22:21:37.988 +01:00 [INF]               - Volo.Abp.Security.AbpSecurityModule
+2021-11-18 22:21:37.988 +01:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2021-11-18 22:21:37.988 +01:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2021-11-18 22:21:37.988 +01:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2021-11-18 22:21:37.988 +01:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2021-11-18 22:21:37.988 +01:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2021-11-18 22:21:37.988 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2021-11-18 22:21:37.988 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2021-11-18 22:21:37.988 +01:00 [INF]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2021-11-18 22:21:37.988 +01:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2021-11-18 22:21:37.988 +01:00 [INF]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2021-11-18 22:21:37.988 +01:00 [INF]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2021-11-18 22:21:37.988 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2021-11-18 22:21:37.988 +01:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2021-11-18 22:21:37.988 +01:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2021-11-18 22:21:37.988 +01:00 [INF]           - Volo.Abp.Threading.AbpThreadingModule
+2021-11-18 22:21:37.988 +01:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2021-11-18 22:21:37.988 +01:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2021-11-18 22:21:37.989 +01:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2021-11-18 22:21:37.989 +01:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2021-11-18 22:21:37.989 +01:00 [INF]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2021-11-18 22:21:37.989 +01:00 [INF]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2021-11-18 22:21:37.989 +01:00 [INF]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2021-11-18 22:21:37.989 +01:00 [INF]         - Volo.Abp.UI.AbpUiModule
+2021-11-18 22:21:37.989 +01:00 [INF]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2021-11-18 22:21:37.989 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2021-11-18 22:21:37.989 +01:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2021-11-18 22:21:37.989 +01:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2021-11-18 22:21:37.989 +01:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2021-11-18 22:21:37.989 +01:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2021-11-18 22:21:37.989 +01:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2021-11-18 22:21:37.989 +01:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2021-11-18 22:21:37.989 +01:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2021-11-18 22:21:37.989 +01:00 [INF]         - Volo.Abp.Features.AbpFeaturesModule
+2021-11-18 22:21:37.989 +01:00 [INF]   - ProjectService.ProjectServiceApplicationModule
+2021-11-18 22:21:37.989 +01:00 [INF]     - ProjectService.ProjectServiceDomainModule
+2021-11-18 22:21:37.989 +01:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2021-11-18 22:21:37.989 +01:00 [INF]   - ProjectService.EntityFrameworkCore.ProjectServiceEntityFrameworkCoreModule
+2021-11-18 22:21:37.989 +01:00 [INF]     - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2021-11-18 22:21:37.989 +01:00 [INF]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2021-11-18 22:21:37.989 +01:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2021-11-18 22:21:37.989 +01:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2021-11-18 22:21:37.989 +01:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2021-11-18 22:21:37.989 +01:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2021-11-18 22:21:38.218 +01:00 [INF] Initialized all ABP modules.
+2021-11-18 22:21:38.266 +01:00 [INF] Now listening on: http://localhost:64243
+2021-11-18 22:21:38.266 +01:00 [INF] Now listening on: https://localhost:64244
+2021-11-18 22:21:38.266 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-18 22:21:38.266 +01:00 [INF] Hosting environment: Development
+2021-11-18 22:21:38.266 +01:00 [INF] Content root path: C:\repos\GitHub\AbpModuleToMicroservice\modules\ProjectService\src\ProjectService.HttpApi.Host
+2021-11-18 22:24:05.210 +01:00 [INF] Starting ProjectService.Host.
+2021-11-18 22:24:05.746 +01:00 [INF] User profile is available. Using 'C:\Users\antos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-18 22:24:05.781 +01:00 [INF] Loaded ABP modules:
+2021-11-18 22:24:05.781 +01:00 [INF] - ProjectService.HttpApi.Host.ProjectServiceHostModule
+2021-11-18 22:24:05.781 +01:00 [INF]   - ProjectService.ProjectServiceHttpApiModule
+2021-11-18 22:24:05.781 +01:00 [INF]     - ProjectService.ProjectServiceApplicationContractsModule
+2021-11-18 22:24:05.781 +01:00 [INF]       - ProjectService.ProjectServiceDomainSharedModule
+2021-11-18 22:24:05.781 +01:00 [INF]         - Volo.Abp.Validation.AbpValidationModule
+2021-11-18 22:24:05.781 +01:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2021-11-18 22:24:05.781 +01:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2021-11-18 22:24:05.781 +01:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2021-11-18 22:24:05.781 +01:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2021-11-18 22:24:05.781 +01:00 [INF]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2021-11-18 22:24:05.781 +01:00 [INF]               - Volo.Abp.Security.AbpSecurityModule
+2021-11-18 22:24:05.781 +01:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2021-11-18 22:24:05.781 +01:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2021-11-18 22:24:05.781 +01:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2021-11-18 22:24:05.781 +01:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2021-11-18 22:24:05.781 +01:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2021-11-18 22:24:05.781 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2021-11-18 22:24:05.781 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2021-11-18 22:24:05.781 +01:00 [INF]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2021-11-18 22:24:05.781 +01:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2021-11-18 22:24:05.781 +01:00 [INF]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2021-11-18 22:24:05.781 +01:00 [INF]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2021-11-18 22:24:05.781 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2021-11-18 22:24:05.781 +01:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2021-11-18 22:24:05.781 +01:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2021-11-18 22:24:05.781 +01:00 [INF]           - Volo.Abp.Threading.AbpThreadingModule
+2021-11-18 22:24:05.781 +01:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2021-11-18 22:24:05.781 +01:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2021-11-18 22:24:05.781 +01:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2021-11-18 22:24:05.781 +01:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2021-11-18 22:24:05.781 +01:00 [INF]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2021-11-18 22:24:05.781 +01:00 [INF]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2021-11-18 22:24:05.781 +01:00 [INF]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2021-11-18 22:24:05.781 +01:00 [INF]         - Volo.Abp.UI.AbpUiModule
+2021-11-18 22:24:05.781 +01:00 [INF]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2021-11-18 22:24:05.781 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2021-11-18 22:24:05.781 +01:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2021-11-18 22:24:05.782 +01:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2021-11-18 22:24:05.782 +01:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2021-11-18 22:24:05.782 +01:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2021-11-18 22:24:05.782 +01:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2021-11-18 22:24:05.782 +01:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2021-11-18 22:24:05.782 +01:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2021-11-18 22:24:05.782 +01:00 [INF]         - Volo.Abp.Features.AbpFeaturesModule
+2021-11-18 22:24:05.782 +01:00 [INF]   - ProjectService.ProjectServiceApplicationModule
+2021-11-18 22:24:05.782 +01:00 [INF]     - ProjectService.ProjectServiceDomainModule
+2021-11-18 22:24:05.782 +01:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2021-11-18 22:24:05.782 +01:00 [INF]   - ProjectService.EntityFrameworkCore.ProjectServiceEntityFrameworkCoreModule
+2021-11-18 22:24:05.782 +01:00 [INF]     - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2021-11-18 22:24:05.782 +01:00 [INF]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2021-11-18 22:24:05.782 +01:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2021-11-18 22:24:05.782 +01:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2021-11-18 22:24:05.782 +01:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2021-11-18 22:24:05.782 +01:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2021-11-18 22:24:06.015 +01:00 [INF] Initialized all ABP modules.
+2021-11-18 22:24:06.065 +01:00 [INF] Now listening on: https://localhost:44372
+2021-11-18 22:24:06.065 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-18 22:24:06.065 +01:00 [INF] Hosting environment: Development
+2021-11-18 22:24:06.065 +01:00 [INF] Content root path: C:\repos\GitHub\AbpModuleToMicroservice\modules\ProjectService\src\ProjectService.HttpApi.Host
+2021-11-18 22:24:22.073 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/ - -
+2021-11-18 22:24:22.273 +01:00 [INF] Executing endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:24:22.299 +01:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller ProjectService.HttpApi.Host.Controllers.HomeController (ProjectService.HttpApi.Host).
+2021-11-18 22:24:22.328 +01:00 [INF] Executing action method ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) - Validation state: "Valid"
+2021-11-18 22:24:22.333 +01:00 [INF] Executed action method ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.2452ms.
+2021-11-18 22:24:22.342 +01:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2021-11-18 22:24:22.347 +01:00 [INF] Executed action ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) in 43.9047ms
+2021-11-18 22:24:22.348 +01:00 [INF] Executed endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:24:22.373 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/ - - - 302 0 - 299.8121ms
+2021-11-18 22:24:22.380 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/index.html - -
+2021-11-18 22:24:22.452 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/index.html - - - 200 - text/html;charset=utf-8 72.2812ms
+2021-11-18 22:24:23.222 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - -
+2021-11-18 22:24:23.318 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.4790ms
+2021-11-18 22:24:57.556 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/ - -
+2021-11-18 22:24:57.557 +01:00 [INF] Executing endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:24:57.558 +01:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller ProjectService.HttpApi.Host.Controllers.HomeController (ProjectService.HttpApi.Host).
+2021-11-18 22:24:57.558 +01:00 [INF] Executing action method ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) - Validation state: "Valid"
+2021-11-18 22:24:57.558 +01:00 [INF] Executed action method ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.0145ms.
+2021-11-18 22:24:57.558 +01:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2021-11-18 22:24:57.559 +01:00 [INF] Executed action ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) in 0.9195ms
+2021-11-18 22:24:57.559 +01:00 [INF] Executed endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:24:57.559 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/ - - - 302 0 - 2.9475ms
+2021-11-18 22:24:57.565 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/index.html - -
+2021-11-18 22:24:57.566 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/index.html - - - 200 - text/html;charset=utf-8 0.9029ms
+2021-11-18 22:24:57.997 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - -
+2021-11-18 22:24:58.005 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.6524ms
+2021-11-18 22:25:06.291 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/oauth2-redirect.html?code=D8370C9A6924210A6D64D7FDB27FBDCE44E3276E2F4CABF9368FD5AAF71F6D0C&scope=ProjectService&state=VGh1IE5vdiAxOCAyMDIxIDIyOjI1OjA2IEdNVCswMTAwIChDZW50cmFsIEV1cm9wZWFuIFN0YW5kYXJkIFRpbWUp - -
+2021-11-18 22:25:06.299 +01:00 [INF] Sending file. Request path: '/oauth2-redirect.html'. Physical path: 'N/A'
+2021-11-18 22:25:06.299 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/oauth2-redirect.html?code=D8370C9A6924210A6D64D7FDB27FBDCE44E3276E2F4CABF9368FD5AAF71F6D0C&scope=ProjectService&state=VGh1IE5vdiAxOCAyMDIxIDIyOjI1OjA2IEdNVCswMTAwIChDZW50cmFsIEV1cm9wZWFuIFN0YW5kYXJkIFRpbWUp - - - 200 2595 text/html 7.7144ms
+2021-11-18 22:25:14.826 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/oauth2-redirect.html?code=4CFE82F051387D117A96E7002A60E788993811C5842908820E01BC8DC7238A73&scope=ProjectService&state=VGh1IE5vdiAxOCAyMDIxIDIyOjI1OjE0IEdNVCswMTAwIChDZW50cmFsIEV1cm9wZWFuIFN0YW5kYXJkIFRpbWUp - -
+2021-11-18 22:25:14.826 +01:00 [INF] Sending file. Request path: '/oauth2-redirect.html'. Physical path: 'N/A'
+2021-11-18 22:25:14.826 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/oauth2-redirect.html?code=4CFE82F051387D117A96E7002A60E788993811C5842908820E01BC8DC7238A73&scope=ProjectService&state=VGh1IE5vdiAxOCAyMDIxIDIyOjI1OjE0IEdNVCswMTAwIChDZW50cmFsIEV1cm9wZWFuIFN0YW5kYXJkIFRpbWUp - - - 200 2595 text/html 0.7591ms
+2021-11-18 22:37:04.869 +01:00 [INF] Application is shutting down...
+2021-11-18 22:37:31.592 +01:00 [INF] Starting ProjectService.Host.
+2021-11-18 22:37:32.124 +01:00 [INF] User profile is available. Using 'C:\Users\antos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-18 22:37:32.157 +01:00 [INF] Loaded ABP modules:
+2021-11-18 22:37:32.157 +01:00 [INF] - ProjectService.HttpApi.Host.ProjectServiceHostModule
+2021-11-18 22:37:32.157 +01:00 [INF]   - ProjectService.ProjectServiceHttpApiModule
+2021-11-18 22:37:32.157 +01:00 [INF]     - ProjectService.ProjectServiceApplicationContractsModule
+2021-11-18 22:37:32.157 +01:00 [INF]       - ProjectService.ProjectServiceDomainSharedModule
+2021-11-18 22:37:32.157 +01:00 [INF]         - Volo.Abp.Validation.AbpValidationModule
+2021-11-18 22:37:32.157 +01:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2021-11-18 22:37:32.157 +01:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2021-11-18 22:37:32.157 +01:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2021-11-18 22:37:32.157 +01:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2021-11-18 22:37:32.157 +01:00 [INF]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2021-11-18 22:37:32.157 +01:00 [INF]               - Volo.Abp.Security.AbpSecurityModule
+2021-11-18 22:37:32.157 +01:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2021-11-18 22:37:32.157 +01:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2021-11-18 22:37:32.157 +01:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2021-11-18 22:37:32.157 +01:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2021-11-18 22:37:32.157 +01:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2021-11-18 22:37:32.157 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2021-11-18 22:37:32.157 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2021-11-18 22:37:32.157 +01:00 [INF]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2021-11-18 22:37:32.157 +01:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2021-11-18 22:37:32.157 +01:00 [INF]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2021-11-18 22:37:32.157 +01:00 [INF]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2021-11-18 22:37:32.157 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2021-11-18 22:37:32.157 +01:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2021-11-18 22:37:32.157 +01:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2021-11-18 22:37:32.157 +01:00 [INF]           - Volo.Abp.Threading.AbpThreadingModule
+2021-11-18 22:37:32.157 +01:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2021-11-18 22:37:32.157 +01:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2021-11-18 22:37:32.157 +01:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2021-11-18 22:37:32.157 +01:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2021-11-18 22:37:32.157 +01:00 [INF]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2021-11-18 22:37:32.157 +01:00 [INF]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2021-11-18 22:37:32.157 +01:00 [INF]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2021-11-18 22:37:32.157 +01:00 [INF]         - Volo.Abp.UI.AbpUiModule
+2021-11-18 22:37:32.157 +01:00 [INF]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2021-11-18 22:37:32.157 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2021-11-18 22:37:32.157 +01:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2021-11-18 22:37:32.157 +01:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2021-11-18 22:37:32.157 +01:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2021-11-18 22:37:32.157 +01:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2021-11-18 22:37:32.157 +01:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2021-11-18 22:37:32.157 +01:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2021-11-18 22:37:32.157 +01:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2021-11-18 22:37:32.157 +01:00 [INF]         - Volo.Abp.Features.AbpFeaturesModule
+2021-11-18 22:37:32.157 +01:00 [INF]   - ProjectService.ProjectServiceApplicationModule
+2021-11-18 22:37:32.157 +01:00 [INF]     - ProjectService.ProjectServiceDomainModule
+2021-11-18 22:37:32.157 +01:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2021-11-18 22:37:32.157 +01:00 [INF]   - ProjectService.EntityFrameworkCore.ProjectServiceEntityFrameworkCoreModule
+2021-11-18 22:37:32.157 +01:00 [INF]     - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2021-11-18 22:37:32.157 +01:00 [INF]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2021-11-18 22:37:32.157 +01:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2021-11-18 22:37:32.157 +01:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2021-11-18 22:37:32.157 +01:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2021-11-18 22:37:32.157 +01:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2021-11-18 22:37:32.443 +01:00 [INF] Initialized all ABP modules.
+2021-11-18 22:37:32.513 +01:00 [INF] Now listening on: https://localhost:44372
+2021-11-18 22:37:32.513 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-18 22:37:32.513 +01:00 [INF] Hosting environment: Development
+2021-11-18 22:37:32.513 +01:00 [INF] Content root path: C:\repos\GitHub\AbpModuleToMicroservice\modules\ProjectService\src\ProjectService.HttpApi.Host
+2021-11-18 22:37:36.310 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/ - -
+2021-11-18 22:37:36.455 +01:00 [INF] Executing endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:37:36.466 +01:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller ProjectService.HttpApi.Host.Controllers.HomeController (ProjectService.HttpApi.Host).
+2021-11-18 22:37:36.482 +01:00 [INF] Executing action method ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) - Validation state: "Valid"
+2021-11-18 22:37:36.485 +01:00 [INF] Executed action method ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.0919ms.
+2021-11-18 22:37:36.490 +01:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2021-11-18 22:37:36.493 +01:00 [INF] Executed action ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) in 24.2044ms
+2021-11-18 22:37:36.493 +01:00 [INF] Executed endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:37:36.506 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/ - - - 302 0 - 195.5463ms
+2021-11-18 22:37:36.510 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/index.html - -
+2021-11-18 22:37:36.550 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/index.html - - - 200 - text/html;charset=utf-8 39.9859ms
+2021-11-18 22:37:37.053 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - -
+2021-11-18 22:37:37.127 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.7710ms
+2021-11-18 22:37:43.028 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/oauth2-redirect.html?code=BD93F032976AB4A5CCA814E0C17011EFB62CAD8C09C7223F85533968539C89A3&scope=ProjectService&state=VGh1IE5vdiAxOCAyMDIxIDIyOjM3OjQwIEdNVCswMTAwIChDZW50cmFsIEV1cm9wZWFuIFN0YW5kYXJkIFRpbWUp - -
+2021-11-18 22:37:43.036 +01:00 [INF] Sending file. Request path: '/oauth2-redirect.html'. Physical path: 'N/A'
+2021-11-18 22:37:43.036 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/oauth2-redirect.html?code=BD93F032976AB4A5CCA814E0C17011EFB62CAD8C09C7223F85533968539C89A3&scope=ProjectService&state=VGh1IE5vdiAxOCAyMDIxIDIyOjM3OjQwIEdNVCswMTAwIChDZW50cmFsIEV1cm9wZWFuIFN0YW5kYXJkIFRpbWUp - - - 200 2595 text/html 8.0826ms
+2021-11-18 22:37:48.287 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/abp/Swashbuckle/SetCsrfCookie - -
+2021-11-18 22:37:48.605 +01:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2021-11-18 22:37:48.606 +01:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle"}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2021-11-18 22:37:48.607 +01:00 [INF] Executing action method Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) - Validation state: "Valid"
+2021-11-18 22:37:48.609 +01:00 [INF] Executed action method Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle), returned result Microsoft.AspNetCore.Mvc.EmptyResult in 1.6053ms.
+2021-11-18 22:37:48.609 +01:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 3.4231ms
+2021-11-18 22:37:48.609 +01:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2021-11-18 22:37:48.610 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/abp/Swashbuckle/SetCsrfCookie - - - 204 - - 323.2576ms
+2021-11-18 22:37:48.639 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/api/app/project - -
+2021-11-18 22:37:48.640 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-18 22:37:48.645 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-18 22:37:48.689 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-18 22:37:49.624 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 935.5369ms.
+2021-11-18 22:37:49.646 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:37:49.649 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-18 22:37:49.654 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 1008.6092ms
+2021-11-18 22:37:49.654 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-18 22:37:49.655 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:37:49.658 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/api/app/project - - - 200 - application/json;+charset=utf-8 1018.3273ms
+2021-11-18 22:39:47.886 +01:00 [INF] Starting ProjectService.Host.
+2021-11-18 22:39:48.475 +01:00 [INF] User profile is available. Using 'C:\Users\antos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-18 22:39:48.512 +01:00 [INF] Loaded ABP modules:
+2021-11-18 22:39:48.512 +01:00 [INF] - ProjectService.HttpApi.Host.ProjectServiceHostModule
+2021-11-18 22:39:48.512 +01:00 [INF]   - ProjectService.ProjectServiceHttpApiModule
+2021-11-18 22:39:48.512 +01:00 [INF]     - ProjectService.ProjectServiceApplicationContractsModule
+2021-11-18 22:39:48.512 +01:00 [INF]       - ProjectService.ProjectServiceDomainSharedModule
+2021-11-18 22:39:48.512 +01:00 [INF]         - Volo.Abp.Validation.AbpValidationModule
+2021-11-18 22:39:48.512 +01:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2021-11-18 22:39:48.512 +01:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2021-11-18 22:39:48.512 +01:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2021-11-18 22:39:48.512 +01:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2021-11-18 22:39:48.512 +01:00 [INF]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2021-11-18 22:39:48.512 +01:00 [INF]               - Volo.Abp.Security.AbpSecurityModule
+2021-11-18 22:39:48.512 +01:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2021-11-18 22:39:48.512 +01:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2021-11-18 22:39:48.512 +01:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2021-11-18 22:39:48.512 +01:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2021-11-18 22:39:48.512 +01:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2021-11-18 22:39:48.512 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2021-11-18 22:39:48.512 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2021-11-18 22:39:48.512 +01:00 [INF]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2021-11-18 22:39:48.512 +01:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2021-11-18 22:39:48.512 +01:00 [INF]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2021-11-18 22:39:48.512 +01:00 [INF]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2021-11-18 22:39:48.512 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2021-11-18 22:39:48.512 +01:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2021-11-18 22:39:48.512 +01:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2021-11-18 22:39:48.512 +01:00 [INF]           - Volo.Abp.Threading.AbpThreadingModule
+2021-11-18 22:39:48.512 +01:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2021-11-18 22:39:48.512 +01:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2021-11-18 22:39:48.512 +01:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2021-11-18 22:39:48.512 +01:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2021-11-18 22:39:48.512 +01:00 [INF]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2021-11-18 22:39:48.512 +01:00 [INF]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2021-11-18 22:39:48.512 +01:00 [INF]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2021-11-18 22:39:48.512 +01:00 [INF]         - Volo.Abp.UI.AbpUiModule
+2021-11-18 22:39:48.512 +01:00 [INF]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2021-11-18 22:39:48.512 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2021-11-18 22:39:48.512 +01:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2021-11-18 22:39:48.512 +01:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2021-11-18 22:39:48.512 +01:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2021-11-18 22:39:48.512 +01:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2021-11-18 22:39:48.512 +01:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2021-11-18 22:39:48.512 +01:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2021-11-18 22:39:48.512 +01:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2021-11-18 22:39:48.512 +01:00 [INF]         - Volo.Abp.Features.AbpFeaturesModule
+2021-11-18 22:39:48.512 +01:00 [INF]   - ProjectService.ProjectServiceApplicationModule
+2021-11-18 22:39:48.512 +01:00 [INF]     - ProjectService.ProjectServiceDomainModule
+2021-11-18 22:39:48.512 +01:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2021-11-18 22:39:48.512 +01:00 [INF]   - ProjectService.EntityFrameworkCore.ProjectServiceEntityFrameworkCoreModule
+2021-11-18 22:39:48.512 +01:00 [INF]     - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2021-11-18 22:39:48.512 +01:00 [INF]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2021-11-18 22:39:48.512 +01:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2021-11-18 22:39:48.512 +01:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2021-11-18 22:39:48.512 +01:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2021-11-18 22:39:48.512 +01:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2021-11-18 22:39:48.749 +01:00 [INF] Initialized all ABP modules.
+2021-11-18 22:39:48.797 +01:00 [INF] Now listening on: https://localhost:44372
+2021-11-18 22:39:48.797 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-18 22:39:48.797 +01:00 [INF] Hosting environment: Development
+2021-11-18 22:39:48.797 +01:00 [INF] Content root path: C:\repos\GitHub\AbpModuleToMicroservice\modules\ProjectService\src\ProjectService.HttpApi.Host
+2021-11-18 22:39:56.081 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/ - -
+2021-11-18 22:39:56.216 +01:00 [INF] Executing endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:39:56.227 +01:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller ProjectService.HttpApi.Host.Controllers.HomeController (ProjectService.HttpApi.Host).
+2021-11-18 22:39:56.243 +01:00 [INF] Executing action method ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) - Validation state: "Valid"
+2021-11-18 22:39:56.246 +01:00 [INF] Executed action method ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.0924ms.
+2021-11-18 22:39:56.251 +01:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2021-11-18 22:39:56.254 +01:00 [INF] Executed action ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host) in 23.7567ms
+2021-11-18 22:39:56.254 +01:00 [INF] Executed endpoint 'ProjectService.HttpApi.Host.Controllers.HomeController.Index (ProjectService.HttpApi.Host)'
+2021-11-18 22:39:56.266 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/ - - - 302 0 - 185.8804ms
+2021-11-18 22:39:56.271 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/index.html - -
+2021-11-18 22:39:56.310 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/index.html - - - 200 - text/html;charset=utf-8 38.5060ms
+2021-11-18 22:39:56.831 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - -
+2021-11-18 22:39:56.915 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 84.5544ms
+2021-11-18 22:40:03.034 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/oauth2-redirect.html?code=4506D32089D83814EB9833629078218989BAB3C160159E941B6E55BA71C8F926&scope=ProjectService&state=VGh1IE5vdiAxOCAyMDIxIDIyOjQwOjAwIEdNVCswMTAwIChDZW50cmFsIEV1cm9wZWFuIFN0YW5kYXJkIFRpbWUp - -
+2021-11-18 22:40:03.043 +01:00 [INF] Sending file. Request path: '/oauth2-redirect.html'. Physical path: 'N/A'
+2021-11-18 22:40:03.043 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/oauth2-redirect.html?code=4506D32089D83814EB9833629078218989BAB3C160159E941B6E55BA71C8F926&scope=ProjectService&state=VGh1IE5vdiAxOCAyMDIxIDIyOjQwOjAwIEdNVCswMTAwIChDZW50cmFsIEV1cm9wZWFuIFN0YW5kYXJkIFRpbWUp - - - 200 2595 text/html 8.9171ms
+2021-11-18 22:40:07.475 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/abp/Swashbuckle/SetCsrfCookie - -
+2021-11-18 22:40:07.908 +01:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2021-11-18 22:40:07.909 +01:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle"}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2021-11-18 22:40:07.910 +01:00 [INF] Executing action method Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) - Validation state: "Valid"
+2021-11-18 22:40:07.912 +01:00 [INF] Executed action method Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle), returned result Microsoft.AspNetCore.Mvc.EmptyResult in 1.5219ms.
+2021-11-18 22:40:07.912 +01:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 3.1929ms
+2021-11-18 22:40:07.912 +01:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2021-11-18 22:40:07.913 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/abp/Swashbuckle/SetCsrfCookie - - - 204 - - 437.9285ms
+2021-11-18 22:40:07.943 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/api/app/project - -
+2021-11-18 22:40:07.949 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-18 22:40:07.954 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-18 22:40:07.991 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-18 22:40:08.854 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 862.4628ms.
+2021-11-18 22:40:08.876 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:40:08.879 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-18 22:40:08.884 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 929.302ms
+2021-11-18 22:40:08.884 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-18 22:40:08.884 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:40:08.887 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/api/app/project - - - 200 - application/json;+charset=utf-8 944.5697ms
+2021-11-18 22:40:11.828 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44372/api/app/project - -
+2021-11-18 22:40:11.830 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-18 22:40:11.830 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-18 22:40:11.831 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-18 22:40:11.839 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7.3703ms.
+2021-11-18 22:40:11.839 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:40:11.839 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-18 22:40:11.839 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 8.9703ms
+2021-11-18 22:40:11.839 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-18 22:40:11.839 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-18 22:40:11.839 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44372/api/app/project - - - 200 - application/json;+charset=utf-8 11.4809ms

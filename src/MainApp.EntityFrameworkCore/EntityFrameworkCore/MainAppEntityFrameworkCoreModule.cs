@@ -1,0 +1,54 @@
+using Microsoft.Extensions.DependencyInjection;
+using Volo.Abp.AuditLogging.EntityFrameworkCore;
+using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.SqlServer;
+using Volo.Abp.FeatureManagement.EntityFrameworkCore;
+using Volo.Abp.Identity.EntityFrameworkCore;
+using Volo.Abp.IdentityServer.EntityFrameworkCore;
+using Volo.Abp.Modularity;
+using Volo.Abp.PermissionManagement.EntityFrameworkCore;
+using Volo.Abp.SettingManagement.EntityFrameworkCore;
+using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using ProjectService.EntityFrameworkCore;
+
+namespace MainApp.EntityFrameworkCore
+{
+    [DependsOn(
+        typeof(MainAppDomainModule),
+        typeof(AbpIdentityEntityFrameworkCoreModule),
+        typeof(AbpIdentityServerEntityFrameworkCoreModule),
+        typeof(AbpPermissionManagementEntityFrameworkCoreModule),
+        typeof(AbpSettingManagementEntityFrameworkCoreModule),
+        typeof(AbpEntityFrameworkCoreSqlServerModule),
+        typeof(AbpBackgroundJobsEntityFrameworkCoreModule),
+        typeof(AbpAuditLoggingEntityFrameworkCoreModule),
+        typeof(AbpTenantManagementEntityFrameworkCoreModule),
+        typeof(AbpFeatureManagementEntityFrameworkCoreModule)
+        )]
+    [DependsOn(typeof(ProjectServiceEntityFrameworkCoreModule))]
+    public class MainAppEntityFrameworkCoreModule : AbpModule
+    {
+        public override void PreConfigureServices(ServiceConfigurationContext context)
+        {
+            MainAppEfCoreEntityExtensionMappings.Configure();
+        }
+
+        public override void ConfigureServices(ServiceConfigurationContext context)
+        {
+            context.Services.AddAbpDbContext<MainAppDbContext>(options =>
+            {
+                /* Remove "includeAllEntities: true" to create
+                 * default repositories only for aggregate roots */
+                options.AddDefaultRepositories(includeAllEntities: true);
+            });
+
+            Configure<AbpDbContextOptions>(options =>
+            {
+                /* The main point to change your DBMS.
+                 * See also MainAppMigrationsDbContextFactory for EF Core tooling. */
+                options.UseSqlServer();
+            });
+        }
+    }
+}
