@@ -719,7 +719,7 @@ To connect to the project service we need to add the `ProjectService` scope as a
 
 ## Create a UI to display the projects
 
-Create a project page to display the project list.
+Create a project page to display the project list in the `MainApp.Web`.
 
 Create a `Projects.cshtml`
 
