@@ -42,10 +42,13 @@ using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
 using ProjectService.Web;
+using ProjectService;
+using Volo.Abp.Http.Client;
 
 namespace MainApp.Web
 {
     [DependsOn(
+        typeof(AbpHttpClientModule),
         typeof(MainAppHttpApiClientModule),
         typeof(AbpAspNetCoreAuthenticationOpenIdConnectModule),
         typeof(AbpAspNetCoreMvcClientModule),
@@ -158,6 +161,7 @@ namespace MainApp.Web
                     options.Scope.Add("email");
                     options.Scope.Add("phone");
                     options.Scope.Add("MainApp");
+                    options.Scope.Add("ProjectService");
                 });
         }
 

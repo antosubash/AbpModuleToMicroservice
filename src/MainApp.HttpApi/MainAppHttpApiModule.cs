@@ -8,11 +8,12 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.HttpApi;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
-using ProjectService;
+using Volo.Abp.Http.Client;
 
 namespace MainApp
 {
     [DependsOn(
+        typeof(AbpHttpClientModule),
         typeof(MainAppApplicationContractsModule),
         typeof(AbpAccountHttpApiModule),
         typeof(AbpIdentityHttpApiModule),
@@ -21,12 +22,12 @@ namespace MainApp
         typeof(AbpFeatureManagementHttpApiModule),
         typeof(AbpSettingManagementHttpApiModule)
         )]
-    [DependsOn(typeof(ProjectServiceHttpApiModule))]
     public class MainAppHttpApiModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             ConfigureLocalization();
+
         }
 
         private void ConfigureLocalization()

@@ -9,8 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MainApp.Domain\MainApp.Domain.csproj" />
-    <ProjectReference Include="..\MainApp.Application.Contracts\MainApp.Application.Contracts.csproj" />
-  <ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.Application\ProjectService.Application.csproj" /></ItemGroup>
+    <ProjectReference Include="..\MainApp.Application.Contracts\MainApp.Application.Contracts.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Account.Application" Version="5.0.0-rc.1" />

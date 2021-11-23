@@ -1,0 +1,14 @@
+﻿@page
+@model MainApp.Web.Pages.ProjectsModel
+<div class="container">
+    <H1>List of projects</H1>
+    @if(Model.Projects != null && Model.Projects.Count > 0){
+        @foreach (var item in Model?.Projects) {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                </div>
+            </div>
+        }  
+    }
+</div>

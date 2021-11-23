@@ -13,7 +13,6 @@ using Volo.Abp.PermissionManagement.Identity;
 using Volo.Abp.PermissionManagement.IdentityServer;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
-using ProjectService;
 
 namespace MainApp
 {
@@ -30,7 +29,6 @@ namespace MainApp
         typeof(AbpTenantManagementDomainModule),
         typeof(AbpEmailingModule)
     )]
-    [DependsOn(typeof(ProjectServiceDomainModule))]
     public class MainAppDomainModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

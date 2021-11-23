@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Volo.Abp;
 using Volo.Abp.Domain.Repositories;
 
 namespace ProjectService
 {
+    [RemoteService(Name = "ProjectService")]
     [Authorize]
     public class ProjectAppService : ProjectServiceAppService, IProjectAppService
     {

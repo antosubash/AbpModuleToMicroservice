@@ -26,6 +26,8 @@ using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Abp.Http.Client;
+using ProjectService;
 
 namespace MainApp
 {
@@ -37,7 +39,8 @@ namespace MainApp
         typeof(MainAppApplicationModule),
         typeof(MainAppEntityFrameworkCoreModule),
         typeof(AbpAspNetCoreSerilogModule),
-        typeof(AbpSwashbuckleModule)
+        typeof(AbpSwashbuckleModule),
+        typeof(MainAppHttpApiClientModule)
     )]
     public class MainAppHttpApiHostModule : AbpModule
     {
@@ -54,6 +57,7 @@ namespace MainApp
             ConfigureDataProtection(context, configuration, hostingEnvironment);
             ConfigureCors(context, configuration);
             ConfigureSwaggerServices(context, configuration);
+
         }
 
         private void ConfigureCache(IConfiguration configuration)
@@ -110,7 +114,8 @@ namespace MainApp
                 configuration["AuthServer:Authority"],
                 new Dictionary<string, string>
                 {
-                    {"MainApp", "MainApp API"}
+                    {"MainApp", "MainApp API"},
+                    {"ProjectService", "ProjectService API"}
                 },
                 options =>
                 {

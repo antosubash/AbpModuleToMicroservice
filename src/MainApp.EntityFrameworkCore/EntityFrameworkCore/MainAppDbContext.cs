@@ -12,7 +12,6 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
-using ProjectService.EntityFrameworkCore;
 
 namespace MainApp.EntityFrameworkCore
 {
@@ -82,7 +81,6 @@ namespace MainApp.EntityFrameworkCore
             //    b.ConfigureByConvention(); //auto configure for the base class props
             //    //...
             //});
-            builder.ConfigureProjectService();
         }
     }
 }

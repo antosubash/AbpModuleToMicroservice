@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MainApp.Domain.Shared\MainApp.Domain.Shared.csproj" />
-  <ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.Application.Contracts\ProjectService.Application.Contracts.csproj" /></ItemGroup>
+    <ProjectReference Include="..\MainApp.Domain.Shared\MainApp.Domain.Shared.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.ObjectExtending" Version="5.0.0-rc.1" />

@@ -50,6 +50,17 @@ namespace MainApp.Web.Menus
                     order: 0
                 )
             );
+
+            context.Menu.Items.Insert(
+                3,
+                new ApplicationMenuItem(
+                    MainAppMenus.Home,
+                    l["Projects"],
+                    "~/Projects",
+                    icon: "fas fa-projects",
+                    order: 0
+                )
+            );
             
             if (MultiTenancyConsts.IsEnabled)
             {

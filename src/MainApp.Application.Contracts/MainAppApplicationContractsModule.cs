@@ -6,7 +6,6 @@ using Volo.Abp.ObjectExtending;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
-using ProjectService;
 
 namespace MainApp
 {
@@ -20,7 +19,6 @@ namespace MainApp
         typeof(AbpTenantManagementApplicationContractsModule),
         typeof(AbpObjectExtendingModule)
     )]
-    [DependsOn(typeof(ProjectServiceApplicationContractsModule))]
     public class MainAppApplicationContractsModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)

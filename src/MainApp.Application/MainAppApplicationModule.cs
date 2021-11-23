@@ -6,7 +6,6 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
-using ProjectService;
 
 namespace MainApp
 {
@@ -20,7 +19,6 @@ namespace MainApp
         typeof(AbpFeatureManagementApplicationModule),
         typeof(AbpSettingManagementApplicationModule)
         )]
-    [DependsOn(typeof(ProjectServiceApplicationModule))]
     public class MainAppApplicationModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

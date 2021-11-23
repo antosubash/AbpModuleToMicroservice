@@ -9,10 +9,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MainApp.Application.Contracts\MainApp.Application.Contracts.csproj" />
-  <ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.HttpApi\ProjectService.HttpApi.csproj" /></ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Volo.Abp.Account.HttpApi" Version="5.0.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Http.Client" Version="5.0.0-rc.1" />
     <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="5.0.0-rc.1" />
     <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="5.0.0-rc.1" />
     <PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="5.0.0-rc.1" />

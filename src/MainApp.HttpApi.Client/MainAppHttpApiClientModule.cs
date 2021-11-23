@@ -8,10 +8,12 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.VirtualFileSystem;
 using ProjectService;
+using Volo.Abp.Http.Client;
 
 namespace MainApp
 {
     [DependsOn(
+        typeof(AbpHttpClientModule),
         typeof(MainAppApplicationContractsModule),
         typeof(AbpAccountHttpApiClientModule),
         typeof(AbpIdentityHttpApiClientModule),
@@ -21,6 +23,7 @@ namespace MainApp
         typeof(AbpSettingManagementHttpApiClientModule)
     )]
     [DependsOn(typeof(ProjectServiceHttpApiClientModule))]
+    [DependsOn(typeof(ProjectServiceApplicationContractsModule))]
     public class MainAppHttpApiClientModule : AbpModule
     {
         public const string RemoteServiceName = "Default";
@@ -30,6 +33,12 @@ namespace MainApp
             context.Services.AddHttpClientProxies(
                 typeof(MainAppApplicationContractsModule).Assembly,
                 RemoteServiceName
+            );
+
+            //Create dynamic client proxies
+            context.Services.AddHttpClientProxies(
+                typeof(ProjectServiceApplicationContractsModule).Assembly,
+                "ProjectService"
             );
 
             Configure<AbpVirtualFileSystemOptions>(options =>

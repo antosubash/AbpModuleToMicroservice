@@ -12,7 +12,6 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
-using ProjectService;
 
 namespace MainApp
 {
@@ -26,7 +25,6 @@ namespace MainApp
         typeof(AbpSettingManagementDomainSharedModule),
         typeof(AbpTenantManagementDomainSharedModule)
         )]
-    [DependsOn(typeof(ProjectServiceDomainSharedModule))]
     public class MainAppDomainSharedModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
