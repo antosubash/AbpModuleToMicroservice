@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using ProjectService;
 
@@ -30,11 +29,6 @@ namespace MainApp.Web.Pages
             {
                 logger.LogError(e.Message);
             }
-        }
-
-        public async Task OnPostLoginAsync()
-        {
-
         }
     }
 }

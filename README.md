@@ -478,7 +478,7 @@ public class ProjectDto: EntityDto<Guid>
 create `IProjectAppService` interface in the `ProjectService.Application.Contracts` project
 
 ```cs
-public interface IProjectAppService
+public interface IProjectAppService: IApplicationService
 {
     Task<List<ProjectDto>> GetListAsync();
     Task<ProjectDto> CreateAsync(string text);
@@ -649,6 +649,170 @@ Once the migration is done lets update the `CorsOrigins` in the IdentityServer.
 },
 ```
 
+## Communicating with the Microservice
+
+Now we have the application running lets see how we can communicate between services.
+
+To communicate with the we need to use the `Client Proxy` [Check docs here](https://docs.abp.io/en/abp/latest/API/Dynamic-CSharp-API-Clients)
+
+### Add the Client and Contract project reference
+
+We need to add `ProjectService.HttpApi.Client` and `ProjectService.Application.Contracts` projects as project reference to `MainApp.HttpApi.Client`
+
+```xml
+    <ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.HttpApi.Client\ProjectService.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.Application.Contracts\ProjectService.Application.Contracts.csproj" />
+```
+
+Update the `MainAppHttpApiClientModule` dependency and add the `ProjectService` as a client proxy.
+
+```cs
+[DependsOn(
+    typeof(AbpHttpClientModule),
+    typeof(MainAppApplicationContractsModule),
+    typeof(AbpAccountHttpApiClientModule),
+    typeof(AbpIdentityHttpApiClientModule),
+    typeof(AbpPermissionManagementHttpApiClientModule),
+    typeof(AbpTenantManagementHttpApiClientModule),
+    typeof(AbpFeatureManagementHttpApiClientModule),
+    typeof(AbpSettingManagementHttpApiClientModule),
+    typeof(ProjectServiceHttpApiClientModule),
+    typeof(ProjectServiceApplicationContractsModule)
+)]
+public class MainAppHttpApiClientModule : AbpModule
+{
+    public const string RemoteServiceName = "Default";
+
+    public override void ConfigureServices(ServiceConfigurationContext context)
+    {
+        context.Services.AddHttpClientProxies(
+            typeof(MainAppApplicationContractsModule).Assembly,
+            RemoteServiceName
+        );
+
+        //Create dynamic client proxies
+        context.Services.AddHttpClientProxies(
+            typeof(ProjectServiceApplicationContractsModule).Assembly,
+            "ProjectService"
+        );
+
+        Configure<AbpVirtualFileSystemOptions>(options =>
+        {
+            options.FileSets.AddEmbedded<MainAppHttpApiClientModule>();
+        });
+    }
+}
+```
+
+Now lets add Remote Service Endpoints to the `appsettings.json` in `MainApp.Web`
+
+```json
+"RemoteServices": {
+    "Default": {
+        "BaseUrl": "https://localhost:44358/"
+    },
+    "ProjectService": {
+        "BaseUrl": "https://localhost:44372/"
+    }
+}
+```
+
+### Update the scope of the Web App
+
+To connect to the project service we need to add the `ProjectService` scope as a scope to the `AddAbpOpenIdConnect` method inside the `ConfigureAuthentication` method in the `MainAppWebModule`
+
+```cs
+.AddAbpOpenIdConnect("oidc", options =>
+{
+    options.Authority = configuration["AuthServer:Authority"];
+    options.RequireHttpsMetadata = Convert.ToBoolean(configuration["AuthServer:RequireHttpsMetadata"]);
+    options.ResponseType = OpenIdConnectResponseType.CodeIdToken;
+
+    options.ClientId = configuration["AuthServer:ClientId"];
+    options.ClientSecret = configuration["AuthServer:ClientSecret"];
+
+    options.SaveTokens = true;
+    options.GetClaimsFromUserInfoEndpoint = true;
+
+    options.Scope.Add("role");
+    options.Scope.Add("email");
+    options.Scope.Add("phone");
+    options.Scope.Add("MainApp");
+    options.Scope.Add("ProjectService"); // This is for the new project service
+});
+```
+
+## Create a UI to display the projects
+
+Create a project page to display the project list.
+
+Create a `Projects.cshtml`
+
+```html
+@page
+@model MainApp.Web.Pages.ProjectsModel
+<div class="container">
+    <H1>List of projects</H1>
+    @if(Model.Projects != null && Model.Projects.Count > 0){
+        @foreach (var item in Model?.Projects) {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                </div>
+            </div>
+        }  
+    }
+</div>
+```
+
+Create a `Projects.cshtml.cs`
+
+```cs
+public class ProjectsModel : MainAppPageModel
+    {
+        private readonly ILogger<ProjectsModel> logger;
+
+        public List<ProjectDto> Projects { get; set; }
+        private IProjectAppService projectAppService { get; set; }
+        public ProjectsModel(IProjectAppService projectAppService, ILogger<ProjectsModel> logger)
+        {
+            this.projectAppService = projectAppService;
+            this.logger = logger;
+            Projects = new List<ProjectDto>();
+        }
+
+        public void OnGet()
+        {
+            try
+            {
+                var projects = projectAppService.GetListAsync().Result;
+                Projects = projects;
+            }
+            catch (Exception e)
+            {
+                logger.LogError(e.Message);
+            }
+        }
+    }
+```
+
+Lets add the newly created page to the Main menu.
+
+Update the `ConfigureMainMenuAsync` method in the `MainAppMenuContributor.cs` file.
+
+```cs
+context.Menu.Items.Insert(
+    3,
+    new ApplicationMenuItem(
+        MainAppMenus.Home,
+        l["Projects"],
+        "~/Projects",
+        icon: "fas fa-list",
+        order: 0
+    )
+);
+```
+
 Now lets run the application.
 
 ## Running the application
@@ -692,4 +856,6 @@ Now run the tye command.
 tye run
 ```
 
-This will run all the projects. Navigate to the `ProjectService` and do the swagger authorization to login and call the project api.
+This will run all the projects. Navigate to the `ProjectService` and do the swagger authorization to login and call the project api to create new project.
+
+To View the project visit the `MainApp.Web` project and click `Projects` menu to see the list of the project you just created.

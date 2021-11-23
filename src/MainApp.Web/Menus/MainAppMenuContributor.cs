@@ -57,7 +57,7 @@ namespace MainApp.Web.Menus
                     MainAppMenus.Home,
                     l["Projects"],
                     "~/Projects",
-                    icon: "fas fa-projects",
+                    icon: "fas fa-list",
                     order: 0
                 )
             );
