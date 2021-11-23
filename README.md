@@ -642,10 +642,10 @@ Once the migration is done lets update the `CorsOrigins` in the IdentityServer.
 
 ```json
 "App": {
-"SelfUrl": "https://localhost:44373",
-"ClientUrl": "http://localhost:4200",
-"CorsOrigins": "https://*.MainApp.com,http://localhost:4200,https://localhost:44307,https://localhost:44358,https://localhost:44372,{ Project Service url }", // update the entry here
-"RedirectAllowedUrls": "http://localhost:4200,https://localhost:44307"
+    "SelfUrl": "https://localhost:44373",
+    "ClientUrl": "http://localhost:4200",
+    "CorsOrigins": "https://*.MainApp.com,http://localhost:4200,https://localhost:44307,https://localhost:44358,https://localhost:44372,{ Project Service url }", // update the entry here
+    "RedirectAllowedUrls": "http://localhost:4200,https://localhost:44307"
 },
 ```
 
@@ -660,8 +660,8 @@ To communicate with the we need to use the `Client Proxy` [Check docs here](http
 We need to add `ProjectService.HttpApi.Client` and `ProjectService.Application.Contracts` projects as project reference to `MainApp.HttpApi.Client`
 
 ```xml
-    <ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.HttpApi.Client\ProjectService.HttpApi.Client.csproj" />
-    <ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.Application.Contracts\ProjectService.Application.Contracts.csproj" />
+<ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.HttpApi.Client\ProjectService.HttpApi.Client.csproj" />
+<ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.Application.Contracts\ProjectService.Application.Contracts.csproj" />
 ```
 
 Update the `MainAppHttpApiClientModule` dependency and add the `ProjectService` as a client proxy.
