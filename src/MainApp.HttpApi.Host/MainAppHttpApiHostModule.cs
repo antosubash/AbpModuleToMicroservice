@@ -26,8 +26,6 @@ using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
-using Volo.Abp.Http.Client;
-using ProjectService;
 
 namespace MainApp
 {
@@ -39,8 +37,7 @@ namespace MainApp
         typeof(MainAppApplicationModule),
         typeof(MainAppEntityFrameworkCoreModule),
         typeof(AbpAspNetCoreSerilogModule),
-        typeof(AbpSwashbuckleModule),
-        typeof(MainAppHttpApiClientModule)
+        typeof(AbpSwashbuckleModule)
     )]
     public class MainAppHttpApiHostModule : AbpModule
     {

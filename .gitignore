@@ -260,3 +260,4 @@ src/MainApp.HttpApi.HostWithIds/Logs/*
 src/MainApp.DbMigrator/Logs/*
 src/MainApp.Blazor.Server/Logs/*
 src/MainApp.Blazor.Server.Tiered/Logs/*
+modules/ProjectService/src/ProjectService.HttpApi.Host/Logs/*
