@@ -20,10 +20,9 @@ namespace MainApp
         typeof(AbpPermissionManagementHttpApiClientModule),
         typeof(AbpTenantManagementHttpApiClientModule),
         typeof(AbpFeatureManagementHttpApiClientModule),
-        typeof(AbpSettingManagementHttpApiClientModule)
+        typeof(AbpSettingManagementHttpApiClientModule),
+        typeof(ProjectServiceApplicationContractsModule)
     )]
-    [DependsOn(typeof(ProjectServiceHttpApiClientModule))]
-    [DependsOn(typeof(ProjectServiceApplicationContractsModule))]
     public class MainAppHttpApiClientModule : AbpModule
     {
         public const string RemoteServiceName = "Default";

@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MainApp.Application.Contracts\MainApp.Application.Contracts.csproj" />
-    <ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.HttpApi.Client\ProjectService.HttpApi.Client.csproj" />
     <ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.Application.Contracts\ProjectService.Application.Contracts.csproj" />
   </ItemGroup>
 

@@ -655,53 +655,28 @@ Now we have the application running lets see how we can communicate between serv
 
 To communicate with the we need to use the `Client Proxy` [Check docs here](https://docs.abp.io/en/abp/latest/API/Dynamic-CSharp-API-Clients)
 
-### Add the Client and Contract project reference
+### Add the Contract project reference
 
-We need to add `ProjectService.HttpApi.Client` and `ProjectService.Application.Contracts` projects as project reference to `MainApp.HttpApi.Client`
+We need to add `ProjectService.Application.Contracts` project as project reference to `MainApp.HttpApi.Client`
 
 ```xml
-<ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.HttpApi.Client\ProjectService.HttpApi.Client.csproj" />
 <ProjectReference Include="..\..\modules\ProjectService\src\ProjectService.Application.Contracts\ProjectService.Application.Contracts.csproj" />
 ```
 
 Update the `MainAppHttpApiClientModule` dependency and add the `ProjectService` as a client proxy.
 
 ```cs
-[DependsOn(
-    typeof(AbpHttpClientModule),
-    typeof(MainAppApplicationContractsModule),
-    typeof(AbpAccountHttpApiClientModule),
-    typeof(AbpIdentityHttpApiClientModule),
-    typeof(AbpPermissionManagementHttpApiClientModule),
-    typeof(AbpTenantManagementHttpApiClientModule),
-    typeof(AbpFeatureManagementHttpApiClientModule),
-    typeof(AbpSettingManagementHttpApiClientModule),
-    typeof(ProjectServiceHttpApiClientModule),
-    typeof(ProjectServiceApplicationContractsModule)
-)]
-public class MainAppHttpApiClientModule : AbpModule
-{
-    public const string RemoteServiceName = "Default";
+typeof(ProjectServiceApplicationContractsModule)
+```
 
-    public override void ConfigureServices(ServiceConfigurationContext context)
-    {
-        context.Services.AddHttpClientProxies(
-            typeof(MainAppApplicationContractsModule).Assembly,
-            RemoteServiceName
-        );
+Update the `ConfigureServices` service in the `MainAppHttpApiClientModule.cs` file in the `MainApp.HttpApi.Client` project.
 
-        //Create dynamic client proxies
-        context.Services.AddHttpClientProxies(
-            typeof(ProjectServiceApplicationContractsModule).Assembly,
-            "ProjectService"
-        );
-
-        Configure<AbpVirtualFileSystemOptions>(options =>
-        {
-            options.FileSets.AddEmbedded<MainAppHttpApiClientModule>();
-        });
-    }
-}
+```cs
+//Create dynamic client proxies
+context.Services.AddHttpClientProxies(
+    typeof(ProjectServiceApplicationContractsModule).Assembly,
+    "ProjectService"
+);
 ```
 
 Now lets add Remote Service Endpoints to the `appsettings.json` in `MainApp.Web`

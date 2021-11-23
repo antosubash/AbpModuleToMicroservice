@@ -2701,3 +2701,409 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 2021-11-23 21:56:03.679 +01:00 [INF] Hosting environment: Development
 2021-11-23 21:56:03.679 +01:00 [INF] Content root path: C:\repos\GitHub\AbpModuleToMicroservice\modules\ProjectService\src\ProjectService.HttpApi.Host
 2021-11-23 21:56:29.413 +01:00 [INF] Application is shutting down...
+2021-11-23 22:06:29.302 +01:00 [INF] Starting ProjectService.Host.
+2021-11-23 22:06:29.850 +01:00 [INF] User profile is available. Using 'C:\Users\antos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-23 22:06:29.884 +01:00 [INF] Loaded ABP modules:
+2021-11-23 22:06:29.884 +01:00 [INF] - ProjectService.HttpApi.Host.ProjectServiceHostModule
+2021-11-23 22:06:29.884 +01:00 [INF]   - ProjectService.ProjectServiceHttpApiModule
+2021-11-23 22:06:29.884 +01:00 [INF]     - ProjectService.ProjectServiceApplicationContractsModule
+2021-11-23 22:06:29.884 +01:00 [INF]       - ProjectService.ProjectServiceDomainSharedModule
+2021-11-23 22:06:29.884 +01:00 [INF]         - Volo.Abp.Validation.AbpValidationModule
+2021-11-23 22:06:29.884 +01:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2021-11-23 22:06:29.884 +01:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2021-11-23 22:06:29.884 +01:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2021-11-23 22:06:29.884 +01:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2021-11-23 22:06:29.884 +01:00 [INF]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2021-11-23 22:06:29.884 +01:00 [INF]               - Volo.Abp.Security.AbpSecurityModule
+2021-11-23 22:06:29.884 +01:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2021-11-23 22:06:29.884 +01:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2021-11-23 22:06:29.884 +01:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2021-11-23 22:06:29.884 +01:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2021-11-23 22:06:29.884 +01:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2021-11-23 22:06:29.884 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2021-11-23 22:06:29.884 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2021-11-23 22:06:29.884 +01:00 [INF]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2021-11-23 22:06:29.884 +01:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2021-11-23 22:06:29.884 +01:00 [INF]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2021-11-23 22:06:29.884 +01:00 [INF]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2021-11-23 22:06:29.884 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2021-11-23 22:06:29.884 +01:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2021-11-23 22:06:29.884 +01:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2021-11-23 22:06:29.884 +01:00 [INF]           - Volo.Abp.Threading.AbpThreadingModule
+2021-11-23 22:06:29.884 +01:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2021-11-23 22:06:29.884 +01:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2021-11-23 22:06:29.884 +01:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2021-11-23 22:06:29.884 +01:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2021-11-23 22:06:29.884 +01:00 [INF]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2021-11-23 22:06:29.884 +01:00 [INF]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2021-11-23 22:06:29.884 +01:00 [INF]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2021-11-23 22:06:29.884 +01:00 [INF]         - Volo.Abp.UI.AbpUiModule
+2021-11-23 22:06:29.884 +01:00 [INF]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2021-11-23 22:06:29.884 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2021-11-23 22:06:29.884 +01:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2021-11-23 22:06:29.884 +01:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2021-11-23 22:06:29.884 +01:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2021-11-23 22:06:29.884 +01:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2021-11-23 22:06:29.884 +01:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2021-11-23 22:06:29.884 +01:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2021-11-23 22:06:29.884 +01:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2021-11-23 22:06:29.884 +01:00 [INF]         - Volo.Abp.Features.AbpFeaturesModule
+2021-11-23 22:06:29.884 +01:00 [INF]   - ProjectService.ProjectServiceApplicationModule
+2021-11-23 22:06:29.884 +01:00 [INF]     - ProjectService.ProjectServiceDomainModule
+2021-11-23 22:06:29.884 +01:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2021-11-23 22:06:29.884 +01:00 [INF]   - ProjectService.EntityFrameworkCore.ProjectServiceEntityFrameworkCoreModule
+2021-11-23 22:06:29.884 +01:00 [INF]     - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2021-11-23 22:06:29.884 +01:00 [INF]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2021-11-23 22:06:29.884 +01:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2021-11-23 22:06:29.884 +01:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2021-11-23 22:06:29.884 +01:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2021-11-23 22:06:29.884 +01:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2021-11-23 22:06:30.121 +01:00 [INF] Initialized all ABP modules.
+2021-11-23 22:06:30.187 +01:00 [INF] Now listening on: https://localhost:44372
+2021-11-23 22:06:30.187 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-23 22:06:30.187 +01:00 [INF] Hosting environment: Development
+2021-11-23 22:06:30.187 +01:00 [INF] Content root path: C:\repos\GitHub\AbpModuleToMicroservice\modules\ProjectService\src\ProjectService.HttpApi.Host
+2021-11-23 22:08:04.385 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/abp/api-definition - -
+2021-11-23 22:08:04.510 +01:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc)'
+2021-11-23 22:08:04.528 +01:00 [INF] Route matched with {area = "abp", action = "Get", controller = "AbpApiDefinition"}. Executing controller action with signature Volo.Abp.Http.Modeling.ApplicationApiDescriptionModel Get(Volo.Abp.Http.Modeling.ApplicationApiDescriptionModelRequestDto) on controller Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController (Volo.Abp.AspNetCore.Mvc).
+2021-11-23 22:08:04.618 +01:00 [INF] Executing action method Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc) - Validation state: "Valid"
+2021-11-23 22:08:04.632 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAsync
+2021-11-23 22:08:04.636 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAuthorizedAsync
+2021-11-23 22:08:04.636 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAsync
+2021-11-23 22:08:04.636 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAuthorizedAsync
+2021-11-23 22:08:04.636 +01:00 [DBG] ActionApiDescriptionModel.Create: AbpApplicationConfiguration.GetAsync
+2021-11-23 22:08:04.637 +01:00 [DBG] ActionApiDescriptionModel.Create: AbpApiDefinition.GetByModel
+2021-11-23 22:08:04.639 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.CreateAsyncByText
+2021-11-23 22:08:04.639 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.DeleteAsyncById
+2021-11-23 22:08:04.639 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.GetListAsync
+2021-11-23 22:08:04.642 +01:00 [INF] Executed action method Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 20.7388ms.
+2021-11-23 22:08:04.648 +01:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.Modeling.ApplicationApiDescriptionModel'.
+2021-11-23 22:08:04.676 +01:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc) in 144.6371ms
+2021-11-23 22:08:04.676 +01:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc)'
+2021-11-23 22:08:04.686 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/abp/api-definition - - - 200 - application/json;+charset=utf-8 301.5959ms
+2021-11-23 22:08:04.696 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:08:04.916 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:04.922 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:08:04.963 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:08:05.818 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 855.5543ms.
+2021-11-23 22:08:05.842 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:05.845 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:08:05.848 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 925.9084ms
+2021-11-23 22:08:05.848 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:05.848 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:05.852 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 1156.3459ms
+2021-11-23 22:08:07.417 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:08:07.420 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:07.420 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:08:07.421 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:08:07.429 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7.5224ms.
+2021-11-23 22:08:07.429 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:07.429 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:08:07.430 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 9.3865ms
+2021-11-23 22:08:07.430 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:07.430 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:07.430 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 12.4385ms
+2021-11-23 22:08:08.413 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:08:08.414 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:08.414 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:08:08.414 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:08:08.452 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 37.7706ms.
+2021-11-23 22:08:08.452 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:08.452 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:08:08.453 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 38.8801ms
+2021-11-23 22:08:08.453 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:08.453 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:08.453 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 40.3401ms
+2021-11-23 22:08:50.768 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/abp/api-definition - -
+2021-11-23 22:08:50.769 +01:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc)'
+2021-11-23 22:08:50.770 +01:00 [INF] Route matched with {area = "abp", action = "Get", controller = "AbpApiDefinition"}. Executing controller action with signature Volo.Abp.Http.Modeling.ApplicationApiDescriptionModel Get(Volo.Abp.Http.Modeling.ApplicationApiDescriptionModelRequestDto) on controller Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController (Volo.Abp.AspNetCore.Mvc).
+2021-11-23 22:08:50.770 +01:00 [INF] Executing action method Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc) - Validation state: "Valid"
+2021-11-23 22:08:50.771 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAsync
+2021-11-23 22:08:50.771 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAuthorizedAsync
+2021-11-23 22:08:50.771 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAsync
+2021-11-23 22:08:50.771 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAuthorizedAsync
+2021-11-23 22:08:50.771 +01:00 [DBG] ActionApiDescriptionModel.Create: AbpApplicationConfiguration.GetAsync
+2021-11-23 22:08:50.771 +01:00 [DBG] ActionApiDescriptionModel.Create: AbpApiDefinition.GetByModel
+2021-11-23 22:08:50.771 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.CreateAsyncByText
+2021-11-23 22:08:50.771 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.DeleteAsyncById
+2021-11-23 22:08:50.771 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.GetListAsync
+2021-11-23 22:08:50.771 +01:00 [INF] Executed action method Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.771ms.
+2021-11-23 22:08:50.771 +01:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.Modeling.ApplicationApiDescriptionModel'.
+2021-11-23 22:08:50.772 +01:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc) in 2.1388ms
+2021-11-23 22:08:50.772 +01:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc)'
+2021-11-23 22:08:50.772 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/abp/api-definition - - - 200 - application/json;+charset=utf-8 3.7013ms
+2021-11-23 22:08:50.818 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:08:50.818 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:50.819 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:08:50.819 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:08:50.821 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.6869ms.
+2021-11-23 22:08:50.821 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:50.821 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:08:50.821 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 2.7128ms
+2021-11-23 22:08:50.821 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:50.821 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:50.822 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 3.8647ms
+2021-11-23 22:08:55.269 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:08:55.270 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:55.270 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:08:55.270 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:08:55.271 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.1024ms.
+2021-11-23 22:08:55.272 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:55.272 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:08:55.272 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 1.943ms
+2021-11-23 22:08:55.272 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:55.272 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:55.272 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 3.2316ms
+2021-11-23 22:08:57.720 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:08:57.721 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:57.721 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:08:57.722 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:08:57.723 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.1795ms.
+2021-11-23 22:08:57.723 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:57.723 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:08:57.723 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 2.063ms
+2021-11-23 22:08:57.723 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:08:57.723 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:08:57.723 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 3.2695ms
+2021-11-23 22:09:33.844 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/abp/api-definition - -
+2021-11-23 22:09:33.844 +01:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc)'
+2021-11-23 22:09:33.844 +01:00 [INF] Route matched with {area = "abp", action = "Get", controller = "AbpApiDefinition"}. Executing controller action with signature Volo.Abp.Http.Modeling.ApplicationApiDescriptionModel Get(Volo.Abp.Http.Modeling.ApplicationApiDescriptionModelRequestDto) on controller Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController (Volo.Abp.AspNetCore.Mvc).
+2021-11-23 22:09:33.845 +01:00 [INF] Executing action method Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc) - Validation state: "Valid"
+2021-11-23 22:09:33.845 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAsync
+2021-11-23 22:09:33.845 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAuthorizedAsync
+2021-11-23 22:09:33.845 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAsync
+2021-11-23 22:09:33.845 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAuthorizedAsync
+2021-11-23 22:09:33.845 +01:00 [DBG] ActionApiDescriptionModel.Create: AbpApplicationConfiguration.GetAsync
+2021-11-23 22:09:33.845 +01:00 [DBG] ActionApiDescriptionModel.Create: AbpApiDefinition.GetByModel
+2021-11-23 22:09:33.845 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.CreateAsyncByText
+2021-11-23 22:09:33.845 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.DeleteAsyncById
+2021-11-23 22:09:33.845 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.GetListAsync
+2021-11-23 22:09:33.845 +01:00 [INF] Executed action method Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.5168ms.
+2021-11-23 22:09:33.845 +01:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.Modeling.ApplicationApiDescriptionModel'.
+2021-11-23 22:09:33.846 +01:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc) in 1.3158ms
+2021-11-23 22:09:33.846 +01:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc)'
+2021-11-23 22:09:33.846 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/abp/api-definition - - - 200 - application/json;+charset=utf-8 2.1377ms
+2021-11-23 22:09:33.892 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:09:33.893 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:09:33.893 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:09:33.894 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:09:33.895 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.1902ms.
+2021-11-23 22:09:33.895 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:09:33.895 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:09:33.895 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 2.0223ms
+2021-11-23 22:09:33.895 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:09:33.895 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:09:33.896 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 3.1073ms
+2021-11-23 22:09:39.681 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:09:39.682 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:09:39.682 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:09:39.682 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:09:39.683 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.0795ms.
+2021-11-23 22:09:39.683 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:09:39.684 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:09:39.684 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 1.9424ms
+2021-11-23 22:09:39.684 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:09:39.684 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:09:39.684 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 3.0672ms
+2021-11-23 22:09:41.460 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:09:41.461 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:09:41.461 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:09:41.462 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:09:41.463 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.1266ms.
+2021-11-23 22:09:41.463 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:09:41.463 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:09:41.463 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 2.1944ms
+2021-11-23 22:09:41.463 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:09:41.463 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:09:41.463 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 3.3577ms
+2021-11-23 22:09:43.958 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:09:43.959 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:09:43.959 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:09:43.959 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:09:43.960 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.0925ms.
+2021-11-23 22:09:43.960 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:09:43.961 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:09:43.961 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 1.8687ms
+2021-11-23 22:09:43.961 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:09:43.961 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:09:43.961 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 2.9707ms
+2021-11-23 22:10:37.030 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:10:37.031 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:37.031 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:10:37.031 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:10:37.032 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.24ms.
+2021-11-23 22:10:37.033 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:37.033 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:10:37.033 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 2.0967ms
+2021-11-23 22:10:37.033 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:37.033 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:37.033 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 3.3058ms
+2021-11-23 22:10:39.613 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:10:39.615 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:39.615 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:10:39.616 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:10:39.618 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.2455ms.
+2021-11-23 22:10:39.618 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:39.618 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:10:39.618 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 3.4742ms
+2021-11-23 22:10:39.618 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:39.618 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:39.619 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 5.6934ms
+2021-11-23 22:10:41.447 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:10:41.448 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:41.448 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:10:41.449 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:10:41.450 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.3666ms.
+2021-11-23 22:10:41.450 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:41.450 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:10:41.450 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 2.1871ms
+2021-11-23 22:10:41.450 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:41.450 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:41.451 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 3.2261ms
+2021-11-23 22:10:43.132 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:10:43.132 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:43.132 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:10:43.133 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:10:43.134 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.0169ms.
+2021-11-23 22:10:43.134 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:43.134 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:10:43.134 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 1.8117ms
+2021-11-23 22:10:43.134 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:43.134 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:43.135 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 2.9278ms
+2021-11-23 22:10:44.322 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:10:44.323 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:44.323 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:10:44.323 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:10:44.324 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.1054ms.
+2021-11-23 22:10:44.325 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:44.325 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:10:44.325 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 1.989ms
+2021-11-23 22:10:44.325 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:44.325 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:44.325 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 3.3246ms
+2021-11-23 22:10:45.156 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:10:45.157 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:45.158 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:10:45.158 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:10:45.159 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.0149ms.
+2021-11-23 22:10:45.159 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:45.159 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:10:45.159 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 1.791ms
+2021-11-23 22:10:45.160 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:45.160 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:45.160 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 3.2551ms
+2021-11-23 22:10:45.880 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:10:45.881 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:45.881 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:10:45.882 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:10:45.883 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.1815ms.
+2021-11-23 22:10:45.883 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:45.883 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:10:45.884 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 2.1231ms
+2021-11-23 22:10:45.884 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:45.884 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:45.884 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 3.3015ms
+2021-11-23 22:10:46.781 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:10:46.782 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:46.782 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:10:46.783 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:10:46.784 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.0253ms.
+2021-11-23 22:10:46.784 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:46.784 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:10:46.784 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 1.8248ms
+2021-11-23 22:10:46.784 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:10:46.784 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:10:46.784 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 2.8614ms
+2021-11-23 22:20:02.696 +01:00 [INF] Application is shutting down...
+2021-11-23 22:20:22.906 +01:00 [INF] Starting ProjectService.Host.
+2021-11-23 22:20:23.506 +01:00 [INF] User profile is available. Using 'C:\Users\antos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-23 22:20:23.543 +01:00 [INF] Loaded ABP modules:
+2021-11-23 22:20:23.543 +01:00 [INF] - ProjectService.HttpApi.Host.ProjectServiceHostModule
+2021-11-23 22:20:23.543 +01:00 [INF]   - ProjectService.ProjectServiceHttpApiModule
+2021-11-23 22:20:23.543 +01:00 [INF]     - ProjectService.ProjectServiceApplicationContractsModule
+2021-11-23 22:20:23.543 +01:00 [INF]       - ProjectService.ProjectServiceDomainSharedModule
+2021-11-23 22:20:23.543 +01:00 [INF]         - Volo.Abp.Validation.AbpValidationModule
+2021-11-23 22:20:23.543 +01:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2021-11-23 22:20:23.543 +01:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2021-11-23 22:20:23.543 +01:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2021-11-23 22:20:23.543 +01:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2021-11-23 22:20:23.543 +01:00 [INF]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2021-11-23 22:20:23.543 +01:00 [INF]               - Volo.Abp.Security.AbpSecurityModule
+2021-11-23 22:20:23.543 +01:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2021-11-23 22:20:23.543 +01:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2021-11-23 22:20:23.543 +01:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2021-11-23 22:20:23.543 +01:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2021-11-23 22:20:23.543 +01:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2021-11-23 22:20:23.543 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2021-11-23 22:20:23.543 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2021-11-23 22:20:23.543 +01:00 [INF]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2021-11-23 22:20:23.543 +01:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2021-11-23 22:20:23.543 +01:00 [INF]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2021-11-23 22:20:23.543 +01:00 [INF]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2021-11-23 22:20:23.543 +01:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2021-11-23 22:20:23.543 +01:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2021-11-23 22:20:23.543 +01:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2021-11-23 22:20:23.543 +01:00 [INF]           - Volo.Abp.Threading.AbpThreadingModule
+2021-11-23 22:20:23.543 +01:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2021-11-23 22:20:23.543 +01:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2021-11-23 22:20:23.543 +01:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2021-11-23 22:20:23.543 +01:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2021-11-23 22:20:23.543 +01:00 [INF]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2021-11-23 22:20:23.543 +01:00 [INF]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2021-11-23 22:20:23.543 +01:00 [INF]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2021-11-23 22:20:23.543 +01:00 [INF]         - Volo.Abp.UI.AbpUiModule
+2021-11-23 22:20:23.543 +01:00 [INF]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2021-11-23 22:20:23.543 +01:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2021-11-23 22:20:23.543 +01:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2021-11-23 22:20:23.543 +01:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2021-11-23 22:20:23.543 +01:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2021-11-23 22:20:23.543 +01:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2021-11-23 22:20:23.543 +01:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2021-11-23 22:20:23.543 +01:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2021-11-23 22:20:23.543 +01:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2021-11-23 22:20:23.543 +01:00 [INF]         - Volo.Abp.Features.AbpFeaturesModule
+2021-11-23 22:20:23.543 +01:00 [INF]   - ProjectService.ProjectServiceApplicationModule
+2021-11-23 22:20:23.543 +01:00 [INF]     - ProjectService.ProjectServiceDomainModule
+2021-11-23 22:20:23.543 +01:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2021-11-23 22:20:23.543 +01:00 [INF]   - ProjectService.EntityFrameworkCore.ProjectServiceEntityFrameworkCoreModule
+2021-11-23 22:20:23.543 +01:00 [INF]     - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2021-11-23 22:20:23.543 +01:00 [INF]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2021-11-23 22:20:23.543 +01:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2021-11-23 22:20:23.543 +01:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2021-11-23 22:20:23.543 +01:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2021-11-23 22:20:23.543 +01:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2021-11-23 22:20:23.807 +01:00 [INF] Initialized all ABP modules.
+2021-11-23 22:20:23.864 +01:00 [INF] Now listening on: https://localhost:44372
+2021-11-23 22:20:23.864 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-23 22:20:23.864 +01:00 [INF] Hosting environment: Development
+2021-11-23 22:20:23.864 +01:00 [INF] Content root path: C:\repos\GitHub\AbpModuleToMicroservice\modules\ProjectService\src\ProjectService.HttpApi.Host
+2021-11-23 22:20:53.463 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/abp/api-definition - -
+2021-11-23 22:20:53.594 +01:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc)'
+2021-11-23 22:20:53.613 +01:00 [INF] Route matched with {area = "abp", action = "Get", controller = "AbpApiDefinition"}. Executing controller action with signature Volo.Abp.Http.Modeling.ApplicationApiDescriptionModel Get(Volo.Abp.Http.Modeling.ApplicationApiDescriptionModelRequestDto) on controller Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController (Volo.Abp.AspNetCore.Mvc).
+2021-11-23 22:20:53.705 +01:00 [INF] Executing action method Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc) - Validation state: "Valid"
+2021-11-23 22:20:53.718 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAsync
+2021-11-23 22:20:53.721 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAuthorizedAsync
+2021-11-23 22:20:53.722 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAsync
+2021-11-23 22:20:53.722 +01:00 [DBG] ActionApiDescriptionModel.Create: Sample.GetAuthorizedAsync
+2021-11-23 22:20:53.722 +01:00 [DBG] ActionApiDescriptionModel.Create: AbpApplicationConfiguration.GetAsync
+2021-11-23 22:20:53.722 +01:00 [DBG] ActionApiDescriptionModel.Create: AbpApiDefinition.GetByModel
+2021-11-23 22:20:53.724 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.CreateAsyncByText
+2021-11-23 22:20:53.724 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.DeleteAsyncById
+2021-11-23 22:20:53.724 +01:00 [DBG] ActionApiDescriptionModel.Create: Project.GetListAsync
+2021-11-23 22:20:53.727 +01:00 [INF] Executed action method Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.9719ms.
+2021-11-23 22:20:53.733 +01:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.Modeling.ApplicationApiDescriptionModel'.
+2021-11-23 22:20:53.761 +01:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc) in 145.4647ms
+2021-11-23 22:20:53.761 +01:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc)'
+2021-11-23 22:20:53.771 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/abp/api-definition - - - 200 - application/json;+charset=utf-8 308.2185ms
+2021-11-23 22:20:53.781 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - -
+2021-11-23 22:20:54.001 +01:00 [INF] Executing endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:20:54.007 +01:00 [INF] Route matched with {action = "GetList", controller = "Project", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProjectService.ProjectDto]] GetListAsync() on controller ProjectService.ProjectAppService (ProjectService.Application).
+2021-11-23 22:20:54.047 +01:00 [INF] Executing action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) - Validation state: "Valid"
+2021-11-23 22:20:54.896 +01:00 [INF] Executed action method ProjectService.ProjectAppService.GetListAsync (ProjectService.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 849.4105ms.
+2021-11-23 22:20:54.920 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:20:54.923 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectService.ProjectDto, ProjectService.Application.Contracts, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-23 22:20:54.926 +01:00 [INF] Executed action ProjectService.ProjectAppService.GetListAsync (ProjectService.Application) in 918.5766ms
+2021-11-23 22:20:54.926 +01:00 [INF] Executed endpoint 'ProjectService.ProjectAppService.GetListAsync (ProjectService.Application)'
+2021-11-23 22:20:54.926 +01:00 [DBG] Added 0 entity changes to the current audit log
+2021-11-23 22:20:54.930 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44372/api/app/project?api-version=1.0 - - - 200 - application/json;+charset=utf-8 1148.8813ms
